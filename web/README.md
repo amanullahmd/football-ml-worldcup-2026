@@ -1,6 +1,6 @@
 # Football ML — Next.js frontend
 
-Modern frontend (Next.js 14 App Router + TypeScript + Tailwind) for the Football ML
+Modern frontend (Next.js 16 App Router + TypeScript + Tailwind) for the Football ML
 World Cup 2026 prediction engine. It consumes the **FastAPI ML API** (the Python
 backend) — all models/predictions stay in Python.
 
@@ -8,7 +8,7 @@ backend) — all models/predictions stay in Python.
 
 ```bash
 # 1. start the ML API (from repo root)
-python -m uvicorn app.main:app --port 8000
+python -m uvicorn api.main:app --port 8000
 
 # 2. start the frontend (from web/)
 npm install      # first time only

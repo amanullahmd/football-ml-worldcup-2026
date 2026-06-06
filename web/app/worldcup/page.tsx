@@ -1,13 +1,13 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { api, pct, HOSTS } from "@/lib/api";
 
 const ROUND_LABEL: Record<string, string> = { R32: "Round of 32", R16: "Round of 16", QF: "Quarter-finals", SF: "Semi-finals", "3P": "3rd place", F: "Final" };
-const GAP: Record<string, number> = { R32: 10, R16: 64, QF: 180, SF: 400, F: 430 };
+const ROW_H = 172; // vertical pitch of a Round-of-32 slot; later rounds are centred between feeders
 
 export default function WorldCupPage() {
   const [tab, setTab] = useState<"outlook" | "schedule">("outlook");
-  const [n, setN] = useState(10000);
+  const n = 25000;
   const [sim, setSim] = useState<any>(null);
   const [sched, setSched] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -28,9 +28,7 @@ export default function WorldCupPage() {
           <p className="text-slate-400 text-sm mt-1">48 teams · 104 matches · official bracket. Hosts 🇺🇸🇨🇦🇲🇽 · Monte-Carlo to champion.</p>
         </div>
         <div className="flex gap-3 items-center">
-          <select className="input !w-auto" value={n} onChange={(e) => setN(+e.target.value)}>
-            <option value={2000}>2,000 sims</option><option value={10000}>10,000 sims</option><option value={25000}>25,000 sims</option>
-          </select>
+          <span className="chip" title="Number of full tournament simulations run to estimate each team's chances">25,000 simulations</span>
           <button className="btn-brand" onClick={run} disabled={loading}>{loading ? "Running…" : "Run simulation"}</button>
         </div>
       </div>
@@ -140,82 +138,122 @@ function Schedule({ sim, sched }: { sim: any; sched: any }) {
 function Bracket({ bracket }: { bracket: any[] }) {
   const byId: Record<number, any> = {}; bracket.forEach((m) => (byId[m.id] = m));
   const feeders = (id: number) => [byId[id].home_src, byId[id].away_src].filter((x) => x != null) as number[];
-  const order: Record<string, number[]> = { F: [104], SF: [], QF: [], R16: [], R32: [], "3P": [103] };
-  order.SF = feeders(104); order.QF = order.SF.flatMap(feeders);
-  order.R16 = order.QF.flatMap(feeders); order.R32 = order.R16.flatMap(feeders);
-  const rounds = ["R32", "R16", "QF", "SF", "F"];
 
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const [paths, setPaths] = useState<string[]>([]);
-  const [dims, setDims] = useState({ w: 0, h: 0 });
+  // Split the tree at the Final: the two semi-finals each anchor one half of the bracket.
+  const sf = feeders(104);                       // [left SF, right SF]
+  const half = (sfId: number) => {               // build a half from its semi-final, R32 → SF
+    const SF = [sfId];
+    const QF = SF.flatMap(feeders);
+    const R16 = QF.flatMap(feeders);
+    const R32 = R16.flatMap(feeders);
+    return { R32, R16, QF, SF };
+  };
+  const L = half(sf[0]); const R = half(sf[1]);
 
-  useLayoutEffect(() => {
-    const draw = () => {
-      const wrap = wrapRef.current; if (!wrap) return;
-      const base = wrap.getBoundingClientRect();
-      const ps: string[] = [];
-      bracket.forEach((m) => {
-        if (m.round === "3P") return;
-        [m.home_src, m.away_src].forEach((src: number | null) => {
-          if (src == null) return;
-          const a = wrap.querySelector(`#bk-${src}`) as HTMLElement;
-          const t = wrap.querySelector(`#bk-${m.id}`) as HTMLElement;
-          if (!a || !t) return;
-          const ra = a.getBoundingClientRect(), rt = t.getBoundingClientRect();
-          const x1 = ra.right - base.left, y1 = ra.top + ra.height / 2 - base.top;
-          const x2 = rt.left - base.left, y2 = rt.top + rt.height / 2 - base.top;
-          const mx = (x1 + x2) / 2;
-          ps.push(`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
-        });
-      });
-      setDims({ w: base.width, h: base.height }); setPaths(ps);
-    };
-    const id = requestAnimationFrame(() => requestAnimationFrame(draw));
-    window.addEventListener("resize", draw);
-    return () => { cancelAnimationFrame(id); window.removeEventListener("resize", draw); };
-  }, [bracket]);
+  const COL_W = 196, COL_GAP = 56, COL_PITCH = COL_W + COL_GAP;
+  const CARD_H = 140; // approx rendered card height, used to vertically centre the absolute card on its midpoint
+  const totalH = L.R32.length * ROW_H;           // 8 slots per half
+  const NCOLS = 9;                               // R32 R16 QF SF | F | SF QF R16 R32
+  const totalW = NCOLS * COL_PITCH - COL_GAP;
 
-  const card = (m: any) => (
-    <div id={`bk-${m.id}`} key={m.id} className="card p-3 relative" style={{ width: 200, zIndex: 1 }}>
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-[10px] font-bold text-brand">M{m.id}</span>
-        <span className="text-[10px] text-slate-500 truncate">{m.venue} · {m.date.slice(5)}</span>
-      </div>
-      {[["home_slot", "home"], ["away_slot", "away"]].map(([sl, sd], idx) => (
-        <div key={sd as string}>
-          {idx === 1 && <div className="border-t border-white/5 my-2" />}
-          <div className="text-[9px] text-slate-600 mb-1">{m[sl as string]}</div>
-          {m[sd as string] ? (
-            <div className="flex justify-between items-center gap-2">
-              <span className="font-semibold truncate text-sm">{HOSTS.has(m[sd as string].team) ? "🏠 " : ""}{m[sd as string].team}</span>
-              <span className="font-mono text-[10px] text-slate-500">{pct(m[sd as string].prob, 0)}</span>
-            </div>
-          ) : <div className="text-slate-600 text-xs">—</div>}
+  // column index per side: left half grows rightward (0→3), right half grows leftward (8→5), Final centred at 4
+  const colL: Record<string, number> = { R32: 0, R16: 1, QF: 2, SF: 3 };
+  const colR: Record<string, number> = { R32: 8, R16: 7, QF: 6, SF: 5 };
+  const colOf: Record<number, number> = { 104: 4 };
+  const yOf: Record<number, number> = {};
+
+  const place = (side: { R32: number[]; R16: number[]; QF: number[]; SF: number[] }, col: Record<string, number>) => {
+    side.R32.forEach((id, i) => { yOf[id] = i * ROW_H + ROW_H / 2; colOf[id] = col.R32; });
+    (["R16", "QF", "SF"] as const).forEach((r) =>
+      side[r].forEach((id) => {
+        const fs = feeders(id);
+        yOf[id] = fs.reduce((s, f) => s + yOf[f], 0) / fs.length;
+        colOf[id] = col[r];
+      })
+    );
+  };
+  place(L, colL); place(R, colR);
+  yOf[104] = (yOf[sf[0]] + yOf[sf[1]]) / 2;       // Final centred between the two semis
+  yOf[103] = CARD_H / 2 + 28;                      // 3rd-place play-off sits below its own label
+
+  // Elbow connectors — direction derived from whether the feeder sits left or right of its parent.
+  const paths: { d: string; champ: boolean }[] = [];
+  bracket.forEach((m) => {
+    if (m.round === "3P") return;
+    const pc = colOf[m.id]; if (pc == null) return;
+    [m.home_src, m.away_src].forEach((src: number | null) => {
+      if (src == null || colOf[src] == null) return;
+      const cc = colOf[src];
+      const leftFeed = cc < pc;
+      const x1 = leftFeed ? cc * COL_PITCH + COL_W : cc * COL_PITCH;        // edge of feeder facing the parent
+      const x2 = leftFeed ? pc * COL_PITCH : pc * COL_PITCH + COL_W;        // edge of parent facing the feeder
+      const mx = (x1 + x2) / 2;
+      const champ = !!(m.winner && byId[src]?.winner && m.winner.team === byId[src].winner.team);
+      paths.push({ d: `M${x1},${yOf[src]} H${mx} V${yOf[m.id]} H${x2}`, champ });
+    });
+  });
+
+  const card = (m: any, mirror = false, ci?: number) => {
+    const col = ci ?? colOf[m.id] ?? 0;
+    return (
+      <div
+        id={`bk-${m.id}`}
+        key={m.id}
+        className={`card p-3 absolute ${m.round === "F" ? "ring-1 ring-amber-400/70" : ""}`}
+        style={{ width: COL_W, left: col * COL_PITCH, top: (yOf[m.id] ?? ROW_H / 2) - CARD_H / 2, zIndex: 1 }}
+      >
+        <div className={`flex items-center mb-2 ${mirror ? "flex-row-reverse" : ""} justify-between`}>
+          <span className="text-[10px] font-bold text-brand">{m.round === "F" ? "🏆 FINAL" : `M${m.id}`}</span>
+          <span className="text-[10px] text-slate-500 truncate">{m.venue} · {m.date.slice(5)}</span>
         </div>
-      ))}
-      {m.winner && <div className="mt-2 pt-2 border-t border-white/5 text-[10px] text-amber-400">▶ {m.winner.team} ({pct(m.winner.prob, 0)})</div>}
-    </div>
-  );
+        {[["home_slot", "home"], ["away_slot", "away"]].map(([sl, sd], idx) => {
+          const t = m[sd as string];
+          const isWin = !!(m.winner && t && m.winner.team === t.team);
+          return (
+            <div key={sd as string}>
+              {idx === 1 && <div className="border-t border-white/5 my-2" />}
+              <div className={`text-[9px] text-slate-600 mb-1 ${mirror ? "text-right" : ""}`}>{m[sl as string]}</div>
+              {t ? (
+                <div className={`flex items-center gap-2 justify-between ${mirror ? "flex-row-reverse" : ""} ${isWin ? "text-amber-300 font-bold" : ""}`}>
+                  <span className="truncate text-sm font-semibold">{isWin ? "▸ " : ""}{HOSTS.has(t.team) ? "🏠 " : ""}{t.team}</span>
+                  <span className="font-mono text-[10px] text-slate-500">{pct(t.prob, 0)}</span>
+                </div>
+              ) : <div className={`text-slate-600 text-xs ${mirror ? "text-right" : ""}`}>—</div>}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const headers: { label: string; col: number }[] = [
+    { label: ROUND_LABEL.R32, col: 0 }, { label: ROUND_LABEL.R16, col: 1 }, { label: ROUND_LABEL.QF, col: 2 }, { label: ROUND_LABEL.SF, col: 3 },
+    { label: ROUND_LABEL.F, col: 4 },
+    { label: ROUND_LABEL.SF, col: 5 }, { label: ROUND_LABEL.QF, col: 6 }, { label: ROUND_LABEL.R16, col: 7 }, { label: ROUND_LABEL.R32, col: 8 },
+  ];
 
   return (
     <div>
-      <div ref={wrapRef} className="relative overflow-x-auto pb-4">
-        <svg className="absolute inset-0 pointer-events-none" width={dims.w} height={dims.h} style={{ zIndex: 0 }}>
-          <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#34e39b" /></marker></defs>
-          {paths.map((d, i) => <path key={i} d={d} fill="none" stroke="#34e39b" strokeWidth={1.6} opacity={0.5} markerEnd="url(#ah)" />)}
-        </svg>
-        <div className="relative flex gap-12 min-w-max" style={{ zIndex: 1 }}>
-          {rounds.map((r) => (
-            <div key={r} className="flex flex-col items-center" style={{ gap: GAP[r] || 16 }}>
-              <div className="label mb-1">{ROUND_LABEL[r]}</div>
-              {order[r].map((id) => card(byId[id]))}
-            </div>
+      <div className="overflow-x-auto pb-4">
+        <div className="relative mb-2" style={{ width: totalW, minWidth: totalW }}>
+          {headers.map((h, i) => (
+            <div key={i} className="label absolute" style={{ left: h.col * COL_PITCH, width: COL_W, textAlign: "center" }}>{h.label}</div>
           ))}
         </div>
+        <div className="relative" style={{ width: totalW, minWidth: totalW, height: totalH }}>
+          <svg className="absolute inset-0 pointer-events-none" width={totalW} height={totalH} style={{ zIndex: 0 }}>
+            {paths.map((p, i) => (
+              <path key={i} d={p.d} fill="none" stroke={p.champ ? "#fbbf24" : "#34e39b"} strokeWidth={p.champ ? 2.2 : 1.4} opacity={p.champ ? 0.9 : 0.4} />
+            ))}
+          </svg>
+          {[L.R32, L.R16, L.QF, L.SF].flat().map((id) => card(byId[id]))}
+          {card(byId[104])}
+          {[R.R32, R.R16, R.QF, R.SF].flat().map((id) => card(byId[id], true))}
+        </div>
       </div>
-      <div className="mt-6 max-w-xs">
+      <div className="mt-6 max-w-xs relative" style={{ height: CARD_H + 28 }}>
         <div className="label mb-2 text-center">3rd-place play-off</div>
-        {card(byId[103])}
+        {card(byId[103], false, 0)}
       </div>
     </div>
   );

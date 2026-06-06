@@ -7,7 +7,50 @@ Dixon‑Coles bivariate Poisson ⊕ a calibrated CatBoost ensemble, trained on
 **49k+ real international matches (1872–2026)**, served via a FastAPI ML API and a
 modern Next.js 16 frontend.
 
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-ML%20API-009688?logo=fastapi&logoColor=white)
+![CatBoost](https://img.shields.io/badge/CatBoost-isotonic%20calibrated-FFCC00?logo=catboost&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22c55e)
+
+**60.4% W/D/L accuracy · RPS 0.167 · excellent calibration · zero mock data**
+
 </div>
+
+---
+
+## 🖼️ Preview
+
+### 🏆 Knockout bracket — mirrored R32 → Final, Monte‑Carlo to champion (25,000 simulations)
+
+The official FIFA 2026 bracket, with each slot filled by its **most‑likely occupant**
+and the champion's path highlighted in gold — all probabilities derived from the same
+calibrated model that powers the match predictor.
+
+<div align="center">
+  <img src="web/public/images/knockout-bracket-wc26.png" alt="World Cup 2026 knockout bracket — Monte-Carlo simulation" width="100%"/>
+</div>
+
+### 📅 Group stage — all 72 matches predicted
+
+Every group, every matchday: predicted scoreline and most‑likely result with its probability.
+
+<div align="center">
+  <img src="web/public/images/group-stage-wc26.png" alt="World Cup 2026 group stage — predicted results" width="100%"/>
+</div>
+
+> Both images are generated programmatically from live API output (no manual screenshots):
+>
+> ```bash
+> curl -s "http://localhost:8000/api/wc2026/schedule"        -o sched.json
+> python scripts/render_group_stage.py sched.json web/public/images/group-stage-wc26.png
+>
+> curl -s "http://localhost:8000/api/wc2026/bracket?n=25000" -o bracket.json
+> python scripts/render_bracket.py    bracket.json web/public/images/knockout-bracket-wc26.png
+> ```
 
 ---
 
@@ -72,15 +115,19 @@ football/
 │   └── wc2026_bracket.py     # official knockout bracket + 3rd-place rule
 ├── scripts/              # runnable entry points
 │   ├── download_data.py      # fetch all datasets (no API key)
+│   ├── fetch_wc2026_squads.py# real 26-man WC2026 squads from Wikipedia
+│   ├── download_player_perf.py# current-season (2025/26) EPL form (FPL API)
 │   ├── train.py              # baseline pipeline (CatBoost + DC)
-│   └── train_pro.py          # "pro" stacked ensemble + calibration + backtest
+│   ├── train_pro.py          # "pro" stacked ensemble + calibration + backtest
+│   ├── render_bracket.py     # render the knockout-bracket PNG from API output
+│   └── render_group_stage.py # render the group-stage PNG from API output
 ├── web/                  # Next.js 16 frontend (TS + Tailwind)
 │   ├── app/                  # Home, Predict, World Cup, Squads pages
 │   ├── components/           # Nav, ExtensionErrorGuard
-│   └── lib/api.ts            # typed API client
+│   ├── lib/api.ts            # typed API client
+│   └── public/images/        # generated README screenshots
 ├── notebooks/            # 01–06 exploratory pipeline (JupyterLab)
 ├── tools/                # jh_client.py (THM GPU), build_notebooks.py
-├── docs/                 # design notes
 ├── data/                 # datasets (gitignored — regenerate via scripts)
 ├── models/               # trained artifacts (gitignored — regenerate)
 ├── outputs/              # saved predictions/sims (gitignored)
