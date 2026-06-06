@@ -116,7 +116,8 @@ export default function SquadsPage() {
                 )}
               </div>
 
-              <div className="label mb-2">Projected XI · real intl goals</div>
+              <div className="label mb-2">Projected XI · current form</div>
+              <div className="text-[10px] text-slate-500 mb-2">🏟 club goals/assists (25/26) · ⚽ international goals (4y)</div>
               <div className="space-y-1">
                 {detail?.xi.map((p, i) => (
                   <div key={i} className="flex items-center justify-between text-sm py-1.5 border-b border-white/5">
@@ -124,9 +125,10 @@ export default function SquadsPage() {
                       <span className="font-mono text-xs w-8 inline-block" style={{ color: POS_COLOR[p.position] }}>{p.position}</span>
                       <span className="font-medium">{p.player}</span>
                     </div>
-                    <div className="flex items-center gap-3 shrink-0">
-                      {p.intl_goals ? <span className="chip">⚽ {p.intl_goals}</span> : null}
-                      <span className="text-slate-500 text-xs truncate max-w-[120px]">{p.club}</span>
+                    <div className="flex items-center gap-2 shrink-0">
+                      {p.club_goals != null ? <span className="chip" title="club goals/assists 25/26">🏟 {p.club_goals}G {p.club_assists}A</span> : null}
+                      {p.intl_goals ? <span className="chip" title="international goals (4y)">⚽ {p.intl_goals}</span> : null}
+                      <span className="text-slate-500 text-xs truncate max-w-[100px]">{p.club}</span>
                       <span className="font-mono font-bold">{p.overall.toFixed(0)}</span>
                     </div>
                   </div>
