@@ -2,6 +2,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api, pct, HOSTS, TeamElo, Prediction } from "@/lib/api";
 
+const POS_COLOR: Record<string, string> = { GK: "#fbbf24", DEF: "#60a5fa", MID: "#34e39b", ATT: "#f87171" };
+
 function Combo({ label, value, onChange, teams }: {
   label: string; value: string; onChange: (v: string) => void; teams: TeamElo[];
 }) {
@@ -191,6 +193,53 @@ export default function PredictPage() {
               </div>
             </div>
           </div>
+
+          {/* Head-to-head */}
+          {res.h2h && res.h2h.played > 0 && (
+            <div className="card p-6">
+              <div className="label mb-3">Head-to-head · {res.h2h.played} meetings</div>
+              <div className="grid grid-cols-3 gap-4 text-center mb-4">
+                <div><div className="text-2xl font-extrabold text-brand">{res.h2h.home_wins}</div><div className="text-xs text-slate-400">{res.home} wins</div></div>
+                <div><div className="text-2xl font-extrabold text-slate-300">{res.h2h.draws}</div><div className="text-xs text-slate-400">Draws</div></div>
+                <div><div className="text-2xl font-extrabold text-blue-400">{res.h2h.away_wins}</div><div className="text-xs text-slate-400">{res.away} wins</div></div>
+              </div>
+              <div className="text-xs text-slate-500 text-center">
+                Goals {res.h2h.home_goals}–{res.h2h.away_goals} · last meetings:{" "}
+                {res.h2h.last5.map((m, i) => <span key={i} className="chip mx-0.5">{m.home_goals}-{m.away_goals}</span>)}
+              </div>
+            </div>
+          )}
+
+          {/* Current 26-man squads — player performance */}
+          {res.players && (res.players.home.length > 0 || res.players.away.length > 0) && (
+            <div className="card p-6">
+              <div className="label mb-1">Current squads · player performance (26)</div>
+              <div className="text-xs text-slate-500 mb-4">Ability from current club tier; ⚽ = real international goals (last 4y). Top 11 in bold.</div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {([["home", res.home], ["away", res.away]] as const).map(([side, name]) => (
+                  <div key={side}>
+                    <div className="font-semibold mb-2">{name}</div>
+                    <div className="space-y-1">
+                      {res.players![side].map((p, i) => (
+                        <div key={i} className={`flex items-center justify-between text-sm py-1 border-b border-white/5 ${i < 11 ? "font-semibold" : "text-slate-400"}`}>
+                          <div className="truncate">
+                            <span className="font-mono text-[10px] w-7 inline-block" style={{ color: POS_COLOR[p.position] }}>{p.position}</span>
+                            {p.player}
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0">
+                            {p.club_goals != null ? <span className="chip" title="club goals/assists 25/26">🏟 {p.club_goals}G {p.club_assists}A</span> : null}
+                            {p.intl_goals ? <span className="chip" title="international goals (4y)">⚽ {p.intl_goals}</span> : null}
+                            <span className="text-slate-500 text-xs truncate max-w-[100px]">{p.club}</span>
+                            <span className="font-mono">{p.overall.toFixed(0)}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

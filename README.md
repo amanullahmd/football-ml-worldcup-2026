@@ -14,8 +14,12 @@ modern Next.js 16 frontend.
 ## ✨ Features
 
 - **Any‑match predictor** — Win/Draw/Loss probabilities, expected goals, full
-  Poisson **score‑matrix**, BTTS & over/under markets, and a **"who's‑missing"
-  what‑if** (remove injured players → attack drops → prediction shifts).
+  Poisson **score‑matrix**, BTTS & over/under markets, **head‑to‑head record**,
+  both teams' **26‑man squads with current‑season form** (club goals/assists +
+  real international goals), and a **"who's‑missing" what‑if**.
+- **One unified model everywhere** — the match predictor, the group schedule, and
+  the tournament simulation all call the *same* calibrated match function, so a
+  given matchup is identical on every screen (no more contradictions).
 - **World Cup 2026** — the official **104‑match schedule** (72 group + 32 knockout),
   the real FIFA **bracket with connector arrows** (R32 → Final + 3rd‑place), and a
   **Monte‑Carlo simulation** (up to 25k runs) to champion probability.
@@ -93,9 +97,10 @@ football/
 ```bash
 pip install -r requirements.txt
 
-python scripts/download_data.py        # datasets + FIFA-24 ratings (~3 min, no key)
-python scripts/fetch_wc2026_squads.py  # real 26-man WC2026 squads (48 teams) from Wikipedia
-python scripts/train_pro.py            # train the pro ensemble (CPU; --gpu for CUDA)
+python scripts/download_data.py         # datasets + FIFA-24 ratings (~3 min, no key)
+python scripts/fetch_wc2026_squads.py   # real 26-man WC2026 squads (48 teams) from Wikipedia
+python scripts/download_player_perf.py  # current-season (2025/26) EPL player form (FPL API)
+python scripts/train_pro.py             # train the pro ensemble (CPU; --gpu for CUDA)
 
 python -m uvicorn api.main:app --port 8000     # ML API → http://127.0.0.1:8000
 ```
@@ -124,7 +129,14 @@ CORS for `localhost:3000` is enabled on the API.
 | **Dixon‑Coles** (`src/dixon_coles.py`) | Bivariate Poisson with attack/defense per team, home advantage, low‑score correction; time‑decayed MLE → full score matrix |
 | **CatBoost stack** (`scripts/train_pro.py`) | Gradient‑boosted W/D/L classifier (+optional LightGBM/XGBoost), **isotonic‑calibrated** |
 | **Ensemble blend** | 50% calibrated ML + 50% Dixon‑Coles |
-| **Monte‑Carlo** (`api/main.py`) | Plays the **real FIFA bracket** with the official best‑third assignment → stage & champion probabilities |
+| **Squad‑strength tilt** (`src/squad.py`) | Bounded adjustment from the **current 26‑man squad** (club tier + 2025/26 form + intl goals) — current players move the prediction without overriding the trained model |
+| **Unified core** (`api/main.py` `_match_core`) | Single cached function = blend ⊕ squad tilt; used by predictor, schedule AND simulation → fully consistent |
+| **Monte‑Carlo** (`api/main.py`) | Plays the **real FIFA bracket** with the official best‑third assignment, sampling from the unified model → stage & champion probabilities |
+
+**Why not "50% H2H + 50% players"?** Head‑to‑head alone is noisy and weak (decades‑old
+results barely predict a 2026 match); a naïve 50% weight *lowers* accuracy. Instead the
+trained, calibrated model is the backbone (H2H is one of its features), and current
+squad strength is a **bounded** tilt on top — better than either signal alone.
 
 ### Measured performance (held‑out 2018–2026)
 
@@ -163,8 +175,15 @@ Interactive docs at `/docs` (Swagger).
 |---|---|
 | [martj42/international_results](https://github.com/martj42/international_results) | 49k international matches + goalscorers (1872–2026) |
 | [football-data.co.uk](https://www.football-data.co.uk) | Club leagues + closing odds |
-| FIFA‑24 player dataset | Player ratings by country (squad strength) |
+| FIFA‑24 player dataset | Player ability overlay (squad strength) |
+| **Fantasy Premier League API** | **Current‑season (2025/26) EPL goals/assists/xG/minutes** (`scripts/download_player_perf.py`) |
+| Wikipedia | Real announced **26‑man WC2026 squads** (`scripts/fetch_wc2026_squads.py`) |
 | [StatsBomb open data](https://github.com/statsbomb/open-data) | Event data incl. xG (index) |
+
+> **Note on current player data:** FBref (the only complete cross‑league source) blocks
+> automated requests (HTTP 403), so full‑world current club stats can't be auto‑downloaded.
+> The system combines what *is* reliably reachable: real current EPL stats (FPL) + real
+> international goals (all players) + current‑club tier — a robust cross‑league signal.
 
 ---
 

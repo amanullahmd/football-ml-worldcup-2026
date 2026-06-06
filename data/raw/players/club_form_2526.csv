@@ -1,0 +1,842 @@
+player,key,web_key,club,league,minutes,goals,assists,xg,xa,form
+David Raya Martín,david raya martin,raya,Arsenal,EPL,3330,0,0,0.0,0.07,5.0
+Kepa Arrizabalaga Revuelta,kepa arrizabalaga revuelta,arrizabalaga,Arsenal,EPL,90,0,0,0.0,0.0,0.7
+Karl Hein,karl hein,hein,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Tommy Setford,tommy setford,setford,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Gabriel dos Santos Magalhães,gabriel dos santos magalhaes,gabriel,Arsenal,EPL,2750,3,5,2.94,1.75,6.0
+William Saliba,william saliba,saliba,Arsenal,EPL,2614,1,0,0.88,1.21,4.3
+Riccardo Calafiori,riccardo calafiori,calafiori,Arsenal,EPL,1697,1,2,3.36,0.76,3.3
+Jurriën Timber,jurrien timber,j.timber,Arsenal,EPL,2452,3,6,4.71,1.53,0.0
+Jakub Kiwior,jakub kiwior,kiwior,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Myles Lewis-Skelly,myles lewis-skelly,lewis-skelly,Arsenal,EPL,697,0,0,0.1,0.2,3.0
+Benjamin White,benjamin white,white,Arsenal,EPL,699,0,1,0.45,0.69,0.3
+Brayden Clarke,brayden clarke,clarke,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Maldini Kacurri,maldini kacurri,kacurri,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Josh Nichols,josh nichols,nichols,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Bukayo Saka,bukayo saka,saka,Arsenal,EPL,2218,7,10,7.57,7.16,4.0
+Martin Ødegaard,martin ødegaard,ødegaard,Arsenal,EPL,1363,1,7,1.25,3.65,2.3
+Noni Madueke,noni madueke,madueke,Arsenal,EPL,1205,3,1,1.23,2.86,4.0
+Gabriel Martinelli Silva,gabriel martinelli silva,martinelli,Arsenal,EPL,1065,1,5,4.12,1.27,2.7
+Leandro Trossard,leandro trossard,trossard,Arsenal,EPL,1997,6,6,5.6,3.59,3.7
+Declan Rice,declan rice,rice,Arsenal,EPL,3093,4,9,3.15,7.32,2.7
+Mikel Merino Zazón,mikel merino zazon,merino,Arsenal,EPL,1024,4,3,3.36,1.45,0.3
+Fábio Ferreira Vieira,fabio ferreira vieira,fabio vieira,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Christian Nørgaard,christian nørgaard,nørgaard,Arsenal,EPL,101,0,0,0.08,0.04,0.3
+Ethan Nwaneri,ethan nwaneri,nwaneri,Arsenal,EPL,165,0,0,0.23,0.08,0.0
+Martín Zubimendi Ibáñez,martin zubimendi ibanez,zubimendi,Arsenal,EPL,2991,5,1,2.84,2.27,1.3
+Ismeal Kabia,ismeal kabia,kabia,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Albert Sambi Lokonga,albert sambi lokonga,sambi,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Kai Havertz,kai havertz,havertz,Arsenal,EPL,577,2,3,3.31,0.64,4.3
+Gabriel Fernando de Jesus,gabriel fernando de jesus,g.jesus,Arsenal,EPL,418,3,0,2.71,0.26,1.7
+Eberechi Eze,eberechi eze,eze,Arsenal,EPL,1885,7,3,5.18,2.66,2.3
+Cristhian Mosquera,cristhian mosquera,mosquera,Arsenal,EPL,986,0,0,0.1,0.63,3.3
+Viktor Gyökeres,viktor gyokeres,gyokeres,Arsenal,EPL,2217,14,1,12.26,1.94,1.3
+Max Dowman,max dowman,dowman,Arsenal,EPL,152,1,1,1.19,0.3,1.0
+Andre Harriman-Annous,andre harriman-annous,harriman-annous,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Piero Hincapié,piero hincapie,hincapie,Arsenal,EPL,1787,1,2,0.36,1.67,1.0
+Marli Salmon,marli salmon,salmon,Arsenal,EPL,0,0,0,0.0,0.0,0.0
+Emiliano Martínez Romero,emiliano martinez romero,martinez,Aston Villa,EPL,2835,0,1,0.0,0.08,2.7
+Marco Bizot,marco bizot,m.bizot,Aston Villa,EPL,585,0,0,0.0,0.0,0.7
+Joe Gauci,joe gauci,gauci,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Filip Marschall,filip marschall,marschall,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Matty Cash,matty cash,cash,Aston Villa,EPL,3016,3,3,1.14,2.94,0.7
+Lucas Digne,lucas digne,digne,Aston Villa,EPL,1842,0,7,0.67,3.28,1.7
+Ezri Konsa Ngoyo,ezri konsa ngoyo,konsa,Aston Villa,EPL,3035,0,1,1.27,0.59,0.7
+Ian Maatsen,ian maatsen,maatsen,Aston Villa,EPL,1590,0,1,1.26,2.39,2.3
+Tyrone Mings,tyrone mings,mings,Aston Villa,EPL,1322,0,1,1.3,0.42,1.3
+Pau Torres,pau torres,pau,Aston Villa,EPL,1673,0,2,1.33,0.39,1.7
+Andrés García,andres garcia,a.garcia,Aston Villa,EPL,83,0,0,0.0,0.01,0.3
+Álex Moreno Lopera,alex moreno lopera,alex moreno,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Lamare Bogarde,lamare bogarde,bogarde,Aston Villa,EPL,1042,0,0,0.0,0.2,1.0
+Lino da Cruz Sousa,lino da cruz sousa,sousa,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Yasin Özcan,yasin ozcan,yasin,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Morgan Rogers,morgan rogers,rogers,Aston Villa,EPL,3280,10,8,6.84,4.32,4.7
+Youri Tielemans,youri tielemans,tielemans,Aston Villa,EPL,1857,0,4,1.14,3.26,2.3
+Leon Bailey,leon bailey,bailey,Aston Villa,EPL,450,0,2,0.5,1.46,2.0
+Emiliano Buendía Stati,emiliano buendia stati,buendia,Aston Villa,EPL,1753,6,2,3.38,2.23,3.0
+Samuel Iling-Junior,samuel iling-junior,iling jr,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Donyell Malen,donyell malen,malen,Aston Villa,EPL,640,4,2,4.03,0.35,0.0
+John McGinn,john mcginn,mcginn,Aston Villa,EPL,2136,5,4,3.0,4.11,4.0
+Ross Barkley,ross barkley,barkley,Aston Villa,EPL,844,3,2,1.58,1.26,5.0
+Enzo Barrenechea,enzo barrenechea,barrenechea,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Lewis Dobbin,lewis dobbin,dobbin,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Boubacar Kamara,boubacar kamara,kamara,Aston Villa,EPL,1410,1,3,0.53,0.84,0.0
+Amadou Onana,amadou onana,onana,Aston Villa,EPL,1755,2,0,1.68,0.69,0.3
+Ben Broggio,ben broggio,broggio,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Leander Dendoncker,leander dendoncker,dendoncker,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Jamaldeen Jimoh-Aloba,jamaldeen jimoh-aloba,jimoh-aloba,Aston Villa,EPL,8,0,0,0.0,0.0,0.0
+Kadan Young,kadan young,young,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Ollie Watkins,ollie watkins,watkins,Aston Villa,EPL,2833,16,4,15.4,1.18,12.3
+Zépiqueno Redmond,zepiqueno redmond,redmond,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Harvey Elliott,harvey elliott,elliott,Aston Villa,EPL,110,0,0,0.29,0.08,0.0
+Jadon Sancho,jadon sancho,sancho,Aston Villa,EPL,863,0,2,0.61,1.87,0.3
+James Wright,james wright,wright,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Douglas Luiz Soares de Paulo,douglas luiz soares de paulo,douglas luiz,Aston Villa,EPL,913,1,1,0.53,1.42,1.3
+Triston Rowe,triston rowe,rowe,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Bradley Burrowes,bradley burrowes,burrowes,Aston Villa,EPL,16,0,0,0.0,0.0,0.0
+Sam Proctor,sam proctor,proctor,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Travis Patterson,travis patterson,patterson,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Victor Lindelöf,victor lindelof,lindelof,Aston Villa,EPL,942,0,1,0.28,0.1,1.3
+George Hemmings,george hemmings,george hemmings,Aston Villa,EPL,25,0,0,0.04,0.01,0.0
+Ronnie Hollingshead,ronnie hollingshead,hollingshead,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Leon Routh,leon routh,leon routh,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+TJ Carroll,tj carroll,carroll,Aston Villa,EPL,0,0,0,0.0,0.0,0.0
+Alysson Edward Franco da Rocha dos Santos,alysson edward franco da rocha dos santos,alysson,Aston Villa,EPL,47,0,0,0.05,0.05,0.0
+Tammy Abraham,tammy abraham,abraham,Aston Villa,EPL,278,2,0,2.05,0.36,0.0
+Max Weiß,max weiß,weiss,Burnley,EPL,270,0,0,0.0,0.0,2.3
+Etienne Green,etienne green,green,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Václav Hladký,vaclav hladky,hladky,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Connor Roberts,connor roberts,roberts,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Kyle Walker,kyle walker,walker,Burnley,EPL,3095,0,2,0.15,1.29,1.7
+Hannes Delcroix,hannes delcroix,delcroix,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Owen Dodgson,owen dodgson,dodgson,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Hjalmar Ekdal,hjalmar ekdal,ekdal,Burnley,EPL,1539,0,0,0.25,0.32,0.0
+Maxime Estève,maxime esteve,esteve,Burnley,EPL,2933,0,0,0.73,0.59,1.7
+Quilindschy Hartman,quilindschy hartman,hartman,Burnley,EPL,1825,0,6,0.32,1.98,0.0
+Bashir Humphreys,bashir humphreys,humphreys,Burnley,EPL,1574,0,2,0.42,0.68,1.0
+Jordan Beyer,jordan beyer,jordan,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Lucas Pires Silva,lucas pires silva,lucas pires,Burnley,EPL,1405,0,0,0.6,1.46,1.3
+Shurandy Sambo,shurandy sambo,sambo,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Oliver Sonne,oliver sonne,sonne,Burnley,EPL,164,1,0,0.55,0.08,0.0
+Axel Tuanzebe,axel tuanzebe,tuanzebe,Burnley,EPL,1201,1,0,0.61,0.12,2.3
+Joe Worrall,joe worrall,worrall,Burnley,EPL,496,0,0,0.08,0.02,0.0
+Jaidon Anthony,jaidon anthony,anthony,Burnley,EPL,2717,8,4,5.11,2.85,3.7
+Manuel Benson Hedilazio,manuel benson hedilazio,benson,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Jacob Bruun Larsen,jacob bruun larsen,bruun larsen,Burnley,EPL,1014,0,1,1.37,1.16,1.0
+Enock Agyei,enock agyei,boateng,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Darko Churlinov,darko churlinov,churlinov,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Josh Cullen,josh cullen,cullen,Burnley,EPL,1513,2,2,0.94,1.36,0.0
+Marcus Edwards,marcus edwards,edwards,Burnley,EPL,1058,1,3,1.49,1.84,0.3
+Hannibal Mejbri,hannibal mejbri,hannibal,Burnley,EPL,1219,1,5,0.91,2.08,2.3
+Luca Koleosho,luca koleosho,koleosho,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Josh Laurent,josh laurent,laurent,Burnley,EPL,1752,1,0,0.87,0.48,0.7
+Loum Tchaouna,loum tchaouna,tchaouna,Burnley,EPL,1259,2,2,1.27,0.91,3.7
+Aaron Ramsey,aaron ramsey,a.ramsey,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Oluwaseun Adewumi,oluwaseun adewumi,adewumi,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Jaydon Banel,jaydon banel,banel,Burnley,EPL,9,0,0,0.0,0.0,0.0
+Mike Trésor Ndayishimiye,mike tresor ndayishimiye,tresor,Burnley,EPL,37,0,0,0.0,0.0,0.0
+Zian Flemming,zian flemming,flemming,Burnley,EPL,1764,11,0,7.94,0.41,5.0
+Zeki Amdouni,zeki amdouni,amdouni,Burnley,EPL,69,0,0,0.24,0.02,1.0
+Lyle Foster,lyle foster,foster,Burnley,EPL,1361,3,2,3.22,0.37,0.3
+Ashley Barnes,ashley barnes,barnes,Burnley,EPL,40,0,0,0.25,0.04,0.0
+Michael Obafemi,michael obafemi,obafemi,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Martin Dúbravka,martin dubravka,dubravka,Burnley,EPL,3150,0,0,0.0,0.04,0.0
+James Ward-Prowse,james ward-prowse,ward-prowse,Burnley,EPL,1092,0,1,0.24,1.87,1.0
+Lesley Ugochukwu,lesley ugochukwu,ugochukwu,Burnley,EPL,2330,3,3,2.5,0.41,3.0
+Armando Broja,armando broja,broja,Burnley,EPL,843,1,1,2.14,0.22,0.0
+Florentino Ibrain Morris Luís,florentino ibrain morris luis,florentino,Burnley,EPL,2100,0,2,0.64,0.52,4.0
+Oliver Pimlott,oliver pimlott,pimlott,Burnley,EPL,0,0,0,0.0,0.0,0.0
+George Brierley,george brierley,brierley,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Kian McMahon-Brown,kian mcmahon-brown,mcmahon-brown,Burnley,EPL,0,0,0,0.0,0.0,0.0
+Norberto Murara Neto,norberto murara neto,neto,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Đorđe Petrović,đorđe petrovic,petrovic,Bournemouth,EPL,3420,0,0,0.0,0.0,4.0
+Will Dennis,will dennis,dennis,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Callan McKenna,callan mckenna,mckenna,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Alex Paulsen,alex paulsen,paulsen,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Illia Zabarnyi,illia zabarnyi,zabarnyi,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Marcos Senesi Barón,marcos senesi baron,senesi,Bournemouth,EPL,3288,0,6,1.53,4.72,4.7
+Adam Smith,adam smith,smith,Bournemouth,EPL,1073,0,2,0.0,0.23,6.3
+Adrien Truffert,adrien truffert,truffert,Bournemouth,EPL,3378,1,6,1.35,3.07,6.3
+Matai Akinmboni,matai akinmboni,akinmboni,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Owen Bevan,owen bevan,bevan,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+James Hill,james hill,hill,Bournemouth,EPL,2102,0,3,0.89,1.16,3.3
+Julián Araujo Zúñiga,julian araujo zuniga,j.araujo,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Chris Mepham,chris mepham,mepham,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Julio Soler Barreto,julio soler barreto,soler,Bournemouth,EPL,34,0,0,0.0,0.0,0.0
+Justin Kluivert,justin kluivert,kluivert,Bournemouth,EPL,945,2,0,2.31,1.55,0.3
+Marcus Tavernier,marcus tavernier,tavernier,Bournemouth,EPL,2732,7,4,9.06,4.6,4.7
+Tyler Adams,tyler adams,adams,Bournemouth,EPL,1769,2,2,0.63,0.63,2.7
+David Brooks,david brooks,brooks,Bournemouth,EPL,1188,1,3,5.81,3.4,0.7
+Ryan Christie,ryan christie,christie,Bournemouth,EPL,978,2,1,1.81,0.79,-0.7
+Lewis Cook,lewis cook,cook,Bournemouth,EPL,872,0,1,0.07,0.52,0.7
+Philip Billing,philip billing,philip,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Alex Scott,alex scott,scott,Bournemouth,EPL,2848,3,2,3.8,2.94,2.7
+Luis Sinisterra Lucumí,luis sinisterra lucumi,sinisterra,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Romain Faivre,romain faivre,faivre,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Hamed Traorè,hamed traore,h.traore,Bournemouth,EPL,16,0,1,0.0,0.0,0.0
+Dominic Sadi,dominic sadi,sadi,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Zain Silcott-Duberry,zain silcott-duberry,silcott-duberry,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Ben Winterburn,ben winterburn,winterburn,Bournemouth,EPL,6,0,0,0.0,0.0,0.0
+Francisco Evanilson de Lima Barbosa,francisco evanilson de lima barbosa,evanilson,Bournemouth,EPL,2741,6,7,10.64,1.48,1.7
+Enes Ünal,enes unal,enes unal,Bournemouth,EPL,214,1,0,2.0,0.07,1.0
+Daniel Adu-Adjei,daniel adu-adjei,adu-adjei,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Junior Kroupi,junior kroupi,kroupi.jr,Bournemouth,EPL,1663,13,0,8.31,1.51,4.0
+Ben Gannon-Doak,ben gannon-doak,gannon-doak,Bournemouth,EPL,105,0,1,0.26,0.13,0.3
+Bafodé Diakité,bafode diakite,diakite,Bournemouth,EPL,1275,0,0,0.02,0.19,0.0
+Remy Rees-Dottin,remy rees-dottin,rees-dottin,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Amine Adli,amine adli,adli,Bournemouth,EPL,1074,3,2,2.6,1.62,0.7
+Álex Jiménez Sánchez,alex jimenez sanchez,a.jimenez,Bournemouth,EPL,2315,1,2,1.09,1.73,0.0
+Veljko Milosavljevic,veljko milosavljevic,milosavljevic,Bournemouth,EPL,367,0,0,0.15,0.19,0.0
+Malcom DaCosta,malcom dacosta,dacosta,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Fraser Forster,fraser forster,forster,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Charlie Stevens,charlie stevens,stevens,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Alex Tóth,alex toth,toth.a,Bournemouth,EPL,135,0,0,0.11,0.33,0.7
+Christos Mandas,christos mandas,mandas,Bournemouth,EPL,0,0,0,0.0,0.0,0.0
+Rayan Vitor Simplício Rocha,rayan vitor simplicio rocha,rayan,Bournemouth,EPL,1110,5,2,2.67,1.84,4.7
+Reiss Nelson,reiss nelson,nelson,Brentford,EPL,118,0,1,0.71,0.11,0.3
+Dango Ouattara,dango ouattara,o.dango,Brentford,EPL,2271,7,8,7.94,4.12,6.0
+Caoimhín Kelleher,caoimhin kelleher,kelleher,Brentford,EPL,3330,0,0,0.0,0.22,3.7
+Ellery Balcombe,ellery balcombe,balcombe,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Matthew Cox,matthew cox,cox,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Julian Eyestone,julian eyestone,eyestone,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Hákon Rafn Valdimarsson,hakon rafn valdimarsson,valdimarsson,Brentford,EPL,90,0,0,0.0,0.0,0.0
+Nathan Collins,nathan collins,collins,Brentford,EPL,2971,1,2,2.24,1.71,2.3
+Keane Lewis-Potter,keane lewis-potter,lewis-potter,Brentford,EPL,1960,3,4,3.01,2.51,2.3
+Kristoffer Ajer,kristoffer ajer,ajer,Brentford,EPL,1805,0,2,0.69,0.73,1.7
+Rico Henry,rico henry,henry,Brentford,EPL,1322,0,2,0.18,0.54,0.0
+Michael Kayode,michael kayode,kayode,Brentford,EPL,3258,1,2,1.28,2.89,1.0
+Ethan Pinnock,ethan pinnock,pinnock,Brentford,EPL,318,0,0,0.01,0.06,0.0
+Mads Roerslev Rasmussen,mads roerslev rasmussen,roerslev,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Sepp van den Berg,sepp van den berg,van den berg,Brentford,EPL,2761,0,3,3.36,1.45,2.7
+Benjamin Arthur,benjamin arthur,arthur,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Benjamin Fredrick,benjamin fredrick,fredrick,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Aaron Hickey,aaron hickey,hickey,Brentford,EPL,679,0,0,0.44,0.17,1.0
+Kim Ji-soo,kim ji-soo,ji-soo,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Jayden Meghoma,jayden meghoma,meghoma,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Kevin Schade,kevin schade,schade,Brentford,EPL,2744,8,5,12.08,2.05,3.3
+Mikkel Damsgaard,mikkel damsgaard,damsgaard,Brentford,EPL,2046,4,4,2.61,5.43,2.3
+Antoni Milambo,antoni milambo,milambo,Brentford,EPL,45,0,0,0.0,0.01,0.0
+Fábio Freitas Gouveia Carvalho,fabio freitas gouveia carvalho,carvalho,Brentford,EPL,100,1,0,0.7,0.03,0.0
+Jordan Henderson,jordan henderson,henderson,Brentford,EPL,1911,1,3,0.33,2.31,0.3
+Vitaly Janelt,vitaly janelt,janelt,Brentford,EPL,1434,1,4,0.82,2.27,1.3
+Mathias Jensen,mathias jensen,jensen,Brentford,EPL,2239,3,2,2.21,6.06,2.7
+Gustavo Nunes Fernandes Gomes,gustavo nunes fernandes gomes,nunes,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Frank Onyeka,frank onyeka,onyeka,Brentford,EPL,88,0,2,0.0,0.36,0.0
+Yehor Yarmoliuk,yehor yarmoliuk,yarmoliuk,Brentford,EPL,2652,1,3,1.22,1.39,3.3
+Romelle Donovan,romelle donovan,donovan,Brentford,EPL,38,0,0,0.09,0.01,0.0
+Yunus Emre Konak,yunus emre konak,konak,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Paris Maghoma,paris maghoma,maghoma,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Myles Peart-Harris,myles peart-harris,peart-harris,Brentford,EPL,1,0,0,0.0,0.0,0.0
+Ryan Trevitt,ryan trevitt,trevitt,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Igor Thiago Nascimento Rodrigues,igor thiago nascimento rodrigues,thiago,Brentford,EPL,3282,22,1,20.6,1.83,2.0
+Iwan Morgan,iwan morgan,morgan,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Josh Dasilva,josh dasilva,dasilva,Brentford,EPL,2,0,0,0.08,0.0,0.3
+Kaye Furo,kaye furo,furo,Brentford,EPL,1,0,0,0.0,0.0,0.0
+Luka Bentt,luka bentt,bentt,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Ollie Shield,ollie shield,shield,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Joshua Stephenson,joshua stephenson,stephenson,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Conor McManus,conor mcmanus,mcmanus,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Riley Owen,riley owen,owen,Brentford,EPL,0,0,0,0.0,0.0,0.0
+Jason Steele,jason steele,steele,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Bart Verbruggen,bart verbruggen,verbruggen,Brighton,EPL,3420,0,0,0.0,0.06,3.3
+Tom McGill,tom mcgill,mcgill,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Carl Rushworth,carl rushworth,rushworth,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Kjell Scherpen,kjell scherpen,scherpen,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Olivier Boscagli,olivier boscagli,boscagli,Brighton,EPL,799,0,1,0.05,0.47,0.0
+Diego Coppola,diego coppola,coppola,Brighton,EPL,193,0,0,0.0,0.01,0.0
+Maxim De Cuyper,maxim de cuyper,de cuyper,Brighton,EPL,1404,2,3,1.66,4.08,5.7
+Lewis Dunk,lewis dunk,dunk,Brighton,EPL,2837,1,1,1.83,0.56,5.7
+Pervis Estupiñán Tenorio,pervis estupinan tenorio,estupinan,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Ferdi Kadıoğlu,ferdi kadıoglu,f.kadıoglu,Brighton,EPL,3130,1,2,2.06,3.31,3.0
+Igor Julio dos Santos de Paulo,igor julio dos santos de paulo,igor,Brighton,EPL,103,0,0,0.0,0.0,0.0
+Tariq Lamptey,tariq lamptey,lamptey,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Jan Paul van Hecke,jan paul van hecke,van hecke,Brighton,EPL,3210,3,3,3.31,1.57,3.0
+Joël Veltman,joel veltman,veltman,Brighton,EPL,1047,1,0,1.15,0.2,2.3
+Adam Webster,adam webster,webster,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Eiran Cashin,eiran cashin,cashin,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Jacob Slater,jacob slater,slater,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Charlie Tasker,charlie tasker,tasker,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Mitoma Kaoru,mitoma kaoru,mitoma,Brighton,EPL,1714,3,1,4.04,2.74,0.0
+Georginio Rutter,georginio rutter,georginio,Brighton,EPL,1776,3,5,2.9,2.9,1.0
+Solly March,solly march,march,Brighton,EPL,38,0,0,0.04,0.02,1.0
+Yankuba Minteh,yankuba minteh,minteh,Brighton,EPL,2389,3,8,3.81,5.06,4.3
+Julio Enciso Espínola,julio enciso espinola,enciso,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Brajan Gruda,brajan gruda,gruda,Brighton,EPL,708,1,1,1.86,0.88,0.0
+Jack Hinshelwood,jack hinshelwood,hinshelwood,Brighton,EPL,1736,4,5,4.94,2.34,4.3
+Matt O'Riley,matt o'riley,o'riley,Brighton,EPL,202,1,0,1.21,0.18,0.0
+Abdallah Sima,abdallah sima,sima,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Yasin Ayari,yasin ayari,ayari,Brighton,EPL,1921,3,4,2.7,1.15,0.7
+Carlos Baleba,carlos baleba,baleba,Brighton,EPL,1646,0,0,0.78,0.72,3.0
+Diego Gómez Amarilla,diego gomez amarilla,gomez,Brighton,EPL,2117,5,1,6.24,1.72,0.7
+James Milner,james milner,milner,Brighton,EPL,772,1,1,1.03,0.66,0.3
+Jeremy Sarmiento Morante,jeremy sarmiento morante,sarmiento,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Tom Watson,tom watson,watson,Brighton,EPL,57,0,0,0.04,0.03,0.0
+Mats Wieffer,mats wieffer,wieffer,Brighton,EPL,1901,2,4,1.92,1.86,0.7
+Malick Yalcouyé,malick yalcouye,yalcouye,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Joe Knight,joe knight,knight,Brighton,EPL,1,0,0,0.0,0.0,0.0
+Adrian Mazilu,adrian mazilu,mazilu,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Andrew Moran,andrew moran,moran,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Danny Welbeck,danny welbeck,welbeck,Brighton,EPL,2249,13,1,12.36,1.4,1.7
+Evan Ferguson,evan ferguson,ferguson,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Stefanos Tzimas,stefanos tzimas,tzimas,Brighton,EPL,132,1,1,0.44,0.11,0.0
+Charalampos Kostoulas,charalampos kostoulas,kostoulas,Brighton,EPL,351,2,1,2.12,0.54,1.0
+Nehemiah Oriola,nehemiah oriola,oriola,Brighton,EPL,1,0,0,0.0,0.0,0.0
+Freddie Simmonds,freddie simmonds,simmonds,Brighton,EPL,0,0,0,0.0,0.0,0.0
+Pascal Groß,pascal groß,groß,Brighton,EPL,1636,1,6,1.39,3.95,3.7
+Harry Howell,harry howell,howell,Brighton,EPL,92,0,0,0.0,0.03,0.0
+Robert Lynch Sánchez,robert lynch sanchez,sanchez,Chelsea,EPL,3040,0,1,0.0,0.04,1.3
+Filip Jörgensen,filip jorgensen,jorgensen,Chelsea,EPL,378,0,0,0.0,0.0,0.7
+Mike Penders,mike penders,penders,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Gabriel Słonina,gabriel słonina,slonina,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Marc Cucurella Saseta,marc cucurella saseta,cucurella,Chelsea,EPL,2706,1,4,2.34,3.23,1.0
+Reece James,reece james,james,Chelsea,EPL,1957,2,6,1.04,3.2,0.7
+Trevoh Chalobah,trevoh chalobah,chalobah,Chelsea,EPL,2780,3,1,1.44,1.03,0.7
+Levi Samuels Colwill,levi samuels colwill,colwill,Chelsea,EPL,225,0,0,0.0,0.12,2.3
+Malo Gusto,malo gusto,gusto,Chelsea,EPL,2255,2,3,1.56,2.97,0.3
+Benoît Badiashile Mukinayi,benoit badiashile mukinayi,b.badiashile,Chelsea,EPL,470,0,0,0.0,0.06,0.0
+Wesley Fofana,wesley fofana,fofana,Chelsea,EPL,1718,0,2,0.72,0.6,1.7
+Mamadou Sarr,mamadou sarr,m.sarr,Chelsea,EPL,100,0,0,0.35,0.0,0.3
+Tosin Adarabioyo,tosin adarabioyo,tosin,Chelsea,EPL,788,0,0,0.11,0.4,0.0
+Josh Acheampong,josh acheampong,acheampong,Chelsea,EPL,657,1,0,0.62,0.13,1.0
+Aarón Anselmino,aaron anselmino,anselmino,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Cole Palmer,cole palmer,palmer,Chelsea,EPL,1954,10,2,10.55,2.49,4.0
+Pedro Lomba Neto,pedro lomba neto,neto,Chelsea,EPL,2629,5,7,4.59,6.84,3.7
+Enzo Fernández,enzo fernandez,enzo,Chelsea,EPL,3114,10,5,11.26,7.26,7.3
+Estêvão Almeida de Oliveira Gonçalves,estevao almeida de oliveira goncalves,estevao,Chelsea,EPL,839,2,5,2.91,2.14,0.0
+Jamie Bynoe-Gittens,jamie bynoe-gittens,gittens,Chelsea,EPL,486,0,2,0.81,0.94,0.0
+Christopher Nkunku,christopher nkunku,nkunku,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Moisés Caicedo Corozo,moises caicedo corozo,caicedo,Chelsea,EPL,2796,3,1,1.45,2.38,1.7
+Roméo Lavia,romeo lavia,lavia,Chelsea,EPL,374,0,0,0.21,0.55,0.0
+Mykhailo Mudryk,mykhailo mudryk,mudryk,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Andrey Nascimento dos Santos,andrey nascimento dos santos,andrey santos,Chelsea,EPL,1247,1,0,2.0,0.88,4.0
+Dário Luís Essugo,dario luis essugo,d.essugo,Chelsea,EPL,26,0,0,0.0,0.01,0.0
+Kendry Páez Andrade,kendry paez andrade,paez,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+João Pedro Junqueira de Jesus,joao pedro junqueira de jesus,joao pedro,Chelsea,EPL,2658,15,9,14.91,1.96,1.0
+Liam Delap,liam delap,delap,Chelsea,EPL,1092,1,2,4.54,0.23,0.7
+Nicolas Jackson,nicolas jackson,n.jackson,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Marc Guiu Paz,marc guiu paz,marc guiu,Chelsea,EPL,265,0,1,1.54,0.29,0.0
+Alejandro Garnacho Ferreyra,alejandro garnacho ferreyra,garnacho,Chelsea,EPL,1261,1,4,3.44,3.68,0.3
+Jorrel Hato,jorrel hato,hato,Chelsea,EPL,1139,0,0,0.3,0.61,1.3
+Landon Emenalo,landon emenalo,emenalo,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Max Merrick,max merrick,merrick,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Teddy Sharman-Lowe,teddy sharman-lowe,sharman-lowe,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Jesse Derry,jesse derry,derry,Chelsea,EPL,45,0,0,0.1,0.02,0.0
+Mathis Eboué,mathis eboue,eboue,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Ryan Kavuma-McQueen,ryan kavuma-mcqueen,kavuma-mcqueen,Chelsea,EPL,0,0,0,0.0,0.0,0.0
+Shumaira Mheuka,shumaira mheuka,mheuka,Chelsea,EPL,1,0,0,0.0,0.0,0.5
+Dean Henderson,dean henderson,henderson,Crystal Palace,EPL,3330,0,0,0.0,0.11,1.2
+Walter Benítez,walter benitez,benitez,Crystal Palace,EPL,90,0,0,0.0,0.0,0.0
+Remi Matthews,remi matthews,matthews,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Daniel Muñoz Mejía,daniel munoz mejia,munoz,Crystal Palace,EPL,2400,4,4,2.45,3.94,2.5
+Maxence Lacroix,maxence lacroix,lacroix,Crystal Palace,EPL,3085,1,2,2.45,0.83,1.5
+Tyrick Mitchell,tyrick mitchell,mitchell,Crystal Palace,EPL,3253,1,3,1.59,2.53,2.0
+Borna Sosa,borna sosa,sosa,Crystal Palace,EPL,99,0,0,0.04,0.07,0.0
+Chris Richards,chris richards,richards,Crystal Palace,EPL,2825,1,0,2.42,1.56,1.0
+Chadi Riad Dnanou,chadi riad dnanou,chadi riad,Crystal Palace,EPL,550,0,1,0.33,0.13,1.2
+Nathaniel Clyne,nathaniel clyne,clyne,Crystal Palace,EPL,592,0,1,0.43,0.6,0.5
+Rob Holding,rob holding,holding,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Caleb Kporha,caleb kporha,kporha,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Ismaïla Sarr,ismaila sarr,sarr,Crystal Palace,EPL,2173,9,2,10.93,1.17,4.0
+Cheick Doucouré,cheick doucoure,doucoure,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Romain Esse,romain esse,esse,Crystal Palace,EPL,40,0,0,0.0,0.04,0.0
+Will Hughes,will hughes,hughes,Crystal Palace,EPL,1560,0,1,1.11,1.94,0.8
+Daichi Kamada,daichi kamada,kamada,Crystal Palace,EPL,1899,0,2,1.64,3.24,1.8
+Jefferson Lerma Solís,jefferson lerma solis,lerma,Crystal Palace,EPL,1722,0,5,1.84,1.48,1.8
+Adam Wharton,adam wharton,wharton,Crystal Palace,EPL,2552,1,6,1.52,7.47,4.2
+Asher Agbinone,asher agbinone,agbinone,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Naouirou Ahamada,naouirou ahamada,ahamada,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Justin Devenny,justin devenny,devenny,Crystal Palace,EPL,785,1,0,2.38,0.39,0.5
+Malcolm Ebiowei,malcolm ebiowei,ebiowei,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Jesurun Rak-Sakyi,jesurun rak-sakyi,j.rak-sakyi,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Matheus França de Oliveira,matheus franca de oliveira,m.franca,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+David Ozoh,david ozoh,ozoh,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Kaden Rodney,kaden rodney,rodney,Crystal Palace,EPL,3,0,0,0.0,0.0,0.0
+Franco Umeh-Chibueze,franco umeh-chibueze,umeh,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Jean-Philippe Mateta,jean-philippe mateta,mateta,Crystal Palace,EPL,2210,12,0,14.42,1.32,3.2
+Eddie Nketiah,eddie nketiah,nketiah,Crystal Palace,EPL,414,2,0,1.77,0.46,0.0
+Odsonne Édouard,odsonne edouard,edouard,Crystal Palace,EPL,2,0,0,0.0,0.0,0.0
+Zach Marsh,zach marsh,marsh,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Brennan Johnson,brennan johnson,johnson,Crystal Palace,EPL,1710,2,1,2.45,1.31,1.2
+Jørgen Strand Larsen,jørgen strand larsen,strand larsen,Crystal Palace,EPL,2301,4,1,5.3,1.12,1.8
+Evann Guessand,evann guessand,guessand,Crystal Palace,EPL,909,1,3,1.56,0.85,0.5
+Rio Cardines,rio cardines,cardines,Crystal Palace,EPL,90,0,0,0.02,0.16,0.5
+Yéremy Pino Santos,yeremy pino santos,yeremy,Crystal Palace,EPL,2074,2,2,4.53,6.12,1.5
+Jaydee Canvot,jaydee canvot,canvot,Crystal Palace,EPL,1331,0,0,1.48,0.33,1.8
+Christantus Uche,christantus uche,uche,Crystal Palace,EPL,159,0,1,0.49,0.01,0.0
+Joél Drakes-Thomas,joel drakes-thomas,drakes-thomas,Crystal Palace,EPL,7,0,0,0.0,0.0,0.0
+Dean Benamar,dean benamar,benamar,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Ben Casey,ben casey,casey,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+George King,george king,king,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Danny Imray,danny imray,imray,Crystal Palace,EPL,0,0,0,0.0,0.0,0.0
+Kiernan Dewsbury-Hall,kiernan dewsbury-hall,dewsbury-hall,Everton,EPL,2629,8,7,4.35,5.34,3.0
+Tyrique George,tyrique george,george,Everton,EPL,351,0,0,0.64,1.19,1.0
+Jordan Pickford,jordan pickford,pickford,Everton,EPL,3420,0,0,0.0,0.2,2.0
+Mark Travers,mark travers,travers,Everton,EPL,0,0,0,0.0,0.0,0.0
+Harry Tyrer,harry tyrer,tyrer,Everton,EPL,0,0,0,0.0,0.0,0.0
+Jarrad Branthwaite,jarrad branthwaite,branthwaite,Everton,EPL,678,1,1,0.34,0.11,0.0
+James Tarkowski,james tarkowski,tarkowski,Everton,EPL,3330,2,3,2.53,2.1,7.0
+Vitalii Mykolenko,vitalii mykolenko,mykolenko,Everton,EPL,2959,0,1,0.28,2.46,1.0
+Jake O'Brien,jake o'brien,o'brien,Everton,EPL,3118,1,3,1.67,1.0,0.7
+Séamus Coleman,seamus coleman,coleman,Everton,EPL,19,0,0,0.0,0.17,0.7
+Michael Keane,michael keane,keane,Everton,EPL,2588,3,1,2.3,0.49,3.0
+Nathan Patterson,nathan patterson,patterson,Everton,EPL,238,0,0,0.03,0.04,0.0
+Roman Dixon,roman dixon,dixon,Everton,EPL,0,0,0,0.0,0.0,0.0
+Reece Welch,reece welch,welch,Everton,EPL,0,0,0,0.0,0.0,0.0
+Iliman Ndiaye,iliman ndiaye,ndiaye,Everton,EPL,2781,6,3,6.68,4.41,2.0
+Dwight McNeil,dwight mcneil,mcneil,Everton,EPL,1161,0,3,1.37,1.91,0.3
+Carlos Alcaraz Durán,carlos alcaraz duran,alcaraz,Everton,EPL,679,0,1,1.17,0.54,0.7
+Idrissa Gana Gueye,idrissa gana gueye,gana,Everton,EPL,2094,2,3,1.99,1.84,0.0
+James Garner,james garner,garner,Everton,EPL,3413,2,7,2.1,6.18,2.0
+Tim Iroegbunam,tim iroegbunam,iroegbunam,Everton,EPL,1477,0,3,0.54,0.71,2.3
+Harrison Armstrong,harrison armstrong,armstrong,Everton,EPL,524,0,0,0.79,0.22,0.3
+Callum Bates,callum bates,bates,Everton,EPL,0,0,0,0.0,0.0,0.0
+Coby Ebere,coby ebere,ebere,Everton,EPL,0,0,0,0.0,0.0,0.0
+Isaac Heath,isaac heath,heath,Everton,EPL,0,0,0,0.0,0.0,0.0
+Jenson Metcalfe,jenson metcalfe,metcalfe,Everton,EPL,0,0,0,0.0,0.0,0.0
+Thierno Barry,thierno barry,barry,Everton,EPL,1898,8,0,8.17,0.44,1.3
+Norberto Bercique Gomes Betuncal,norberto bercique gomes betuncal,beto,Everton,EPL,1551,9,1,8.9,0.23,3.7
+Youssef Ramalho Chermiti,youssef ramalho chermiti,y.chermiti,Everton,EPL,0,0,0,0.0,0.0,0.0
+Martin Sherif,martin sherif,sherif,Everton,EPL,0,0,0,0.0,0.0,0.0
+Jack Grealish,jack grealish,grealish,Everton,EPL,1627,2,6,2.05,3.37,0.0
+Tom King,tom king,king,Everton,EPL,0,0,0,0.0,0.0,0.0
+Adam Aznou,adam aznou,aznou,Everton,EPL,0,0,0,0.0,0.0,0.0
+Tyler Onyango,tyler onyango,onyango,Everton,EPL,0,0,0,0.0,0.0,0.0
+Elijah Campbell,elijah campbell,campbell,Everton,EPL,0,0,0,0.0,0.0,0.0
+Tyler Dibling,tyler dibling,dibling,Everton,EPL,349,0,0,0.2,0.14,0.0
+Merlin Röhl,merlin rohl,rohl,Everton,EPL,675,1,1,0.67,0.35,4.3
+Braiden Graham,braiden graham,graham,Everton,EPL,0,0,0,0.0,0.0,0.0
+Bernd Leno,bernd leno,leno,Fulham,EPL,3420,0,0,0.0,0.02,3.7
+Steven Benda,steven benda,benda,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Antonee Robinson,antonee robinson,robinson,Fulham,EPL,1487,1,0,1.07,1.58,6.3
+Joachim Andersen,joachim andersen,andersen,Fulham,EPL,2882,0,1,1.43,1.83,-0.7
+Calvin Bassey,calvin bassey,bassey,Fulham,EPL,2532,1,1,1.71,0.35,3.3
+Timothy Castagne,timothy castagne,castagne,Fulham,EPL,1838,0,2,1.5,1.47,5.0
+Issa Diop,issa diop,diop,Fulham,EPL,812,1,0,0.8,0.05,6.0
+Jorge Cuenca Barreno,jorge cuenca barreno,j.cuenca,Fulham,EPL,935,0,0,0.05,0.53,0.0
+Kenny Tete,kenny tete,tete,Fulham,EPL,1791,1,0,0.92,1.46,0.0
+Samuel Amissah,samuel amissah,amissah,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Alex Iwobi,alex iwobi,iwobi,Fulham,EPL,2420,4,3,1.91,4.7,1.7
+Emile Smith Rowe,emile smith rowe,smith rowe,Fulham,EPL,1909,3,1,4.71,1.12,2.0
+Andreas Hoelgebaum Pereira,andreas hoelgebaum pereira,andreas,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Ryan Sessegnon,ryan sessegnon,sessegnon,Fulham,EPL,1816,3,3,1.6,1.8,0.0
+Harry Wilson,harry wilson,wilson,Fulham,EPL,2674,10,9,5.88,4.77,2.3
+Sander Berge,sander berge,berge,Fulham,EPL,2904,0,3,1.54,1.5,1.3
+Tom Cairney,tom cairney,cairney,Fulham,EPL,756,2,0,1.21,0.81,2.7
+Saša Lukić,sasa lukic,lukic,Fulham,EPL,1730,1,4,2.23,1.91,2.0
+Martial Godo,martial godo,godo,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Luke Harris,luke harris,harris,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Josh King,josh king,king,Fulham,EPL,1290,1,3,2.47,0.66,0.7
+Harrison Reed,harrison reed,reed,Fulham,EPL,89,1,0,0.13,0.45,0.0
+Raúl Jiménez Rodríguez,raul jimenez rodriguez,raul,Fulham,EPL,2183,9,5,11.58,0.9,0.7
+Rodrigo Muniz Carvalho,rodrigo muniz carvalho,muniz,Fulham,EPL,987,1,1,3.3,0.15,1.7
+Oscar Bobb,oscar bobb,bobb,Fulham,EPL,1030,0,2,1.47,2.1,2.0
+Benjamin Lecomte,benjamin lecomte,lecomte,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Samuel Chukwueze,samuel chukwueze,chukwueze,Fulham,EPL,1067,3,4,2.1,3.36,1.0
+Kevin Santos Lopes de Macedo,kevin santos lopes de macedo,kevin,Fulham,EPL,1030,1,3,1.21,1.47,2.0
+Jonah Kusi-Asare,jonah kusi-asare,kusi-asare,Fulham,EPL,49,0,0,0.0,0.07,0.3
+Seth Ridgeon,seth ridgeon,ridgeon,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Alfie McNally,alfie mcnally,mcnally,Fulham,EPL,0,0,0,0.0,0.0,0.0
+Facundo Buonanotte,facundo buonanotte,buonanotte,Leeds,EPL,81,0,0,0.06,0.28,0.3
+Illan Meslier,illan meslier,meslier,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Alex Cairns,alex cairns,cairns,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Karl Darlow,karl darlow,darlow,Leeds,EPL,1980,0,0,0.0,0.05,5.0
+Jayden Bogle,jayden bogle,bogle,Leeds,EPL,2795,1,5,2.08,3.11,0.7
+Pascal Struijk,pascal struijk,struijk,Leeds,EPL,2935,0,1,3.06,0.76,0.7
+Jaka Bijol,jaka bijol,bijol,Leeds,EPL,1888,1,3,0.9,0.75,4.7
+Sebastiaan Bornauw,sebastiaan bornauw,bornauw,Leeds,EPL,429,0,0,0.2,0.01,2.7
+Sam Byram,sam byram,byram,Leeds,EPL,8,0,0,0.0,0.0,0.3
+Gabriel Gudmundsson,gabriel gudmundsson,gudmundsson,Leeds,EPL,2637,0,0,1.1,2.89,0.0
+Joe Rodon,joe rodon,rodon,Leeds,EPL,2952,2,0,1.4,0.56,2.7
+Isaac Schmidt,isaac schmidt,schmidt,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Brenden Aaronson,brenden aaronson,aaronson,Leeds,EPL,2449,4,8,4.53,3.6,1.3
+Wilfried Gnonto,wilfried gnonto,gnonto,Leeds,EPL,521,0,3,0.4,0.77,1.0
+Jack Harrison,jack harrison,harrison,Leeds,EPL,262,0,0,0.28,0.23,0.0
+Daniel James,daniel james,james,Leeds,EPL,547,0,0,0.91,0.71,1.3
+Ethan Ampadu,ethan ampadu,ampadu,Leeds,EPL,3119,1,4,2.47,2.2,5.3
+Sam Greenwood,sam greenwood,greenwood,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Ilia Gruev,ilia gruev,gruev,Leeds,EPL,1318,0,4,0.49,0.86,0.0
+Largie Ramazani,largie ramazani,ramazani,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Tanaka Ao,tanaka ao,tanaka,Leeds,EPL,1307,2,1,1.44,1.39,3.3
+Charlie Crew,charlie crew,crew,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Joe Gelhardt,joe gelhardt,gelhardt,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Darko Gyabi,darko gyabi,gyabi,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Joël Piroe,joel piroe,piroe,Leeds,EPL,244,0,0,0.9,0.13,0.7
+Patrick Bamford,patrick bamford,bamford,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Mateo Joseph Fernández-Regatillo,mateo joseph fernandez-regatillo,mateo joseph,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Lukas Nmecha,lukas nmecha,nmecha,Leeds,EPL,1065,6,1,7.25,1.58,1.3
+Sean Longstaff,sean longstaff,longstaff,Leeds,EPL,1003,2,2,1.23,1.87,0.7
+Anton Stach,anton stach,stach,Leeds,EPL,2369,5,6,2.88,4.47,1.7
+Lucas Estella Perri,lucas estella perri,perri,Leeds,EPL,1440,0,0,0.0,0.0,0.0
+Dominic Calvert-Lewin,dominic calvert-lewin,calvert-lewin,Leeds,EPL,2721,14,2,15.57,1.06,5.3
+Noah Okafor,noah okafor,okafor,Leeds,EPL,1553,8,3,5.25,1.32,0.0
+James Justin,james justin,justin,Leeds,EPL,1893,2,1,1.83,1.16,3.7
+Harry Gray,harry gray,gray,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Sam Chambers,sam chambers,chambers,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Jayden Lienou,jayden lienou,lienou,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Rhys Chadwick,rhys chadwick,chadwick,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Alfie Cresswell,alfie cresswell,cresswell,Leeds,EPL,0,0,0,0.0,0.0,0.0
+Alisson Becker,alisson becker,a.becker,Liverpool,EPL,2340,0,0,0.0,0.03,0.7
+Giorgi Mamardashvili,giorgi mamardashvili,mamardashvili,Liverpool,EPL,867,0,0,0.0,0.0,1.0
+Ármin Pécsi,armin pecsi,pecsi,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Freddie Woodman,freddie woodman,woodman,Liverpool,EPL,212,0,0,0.0,0.0,0.0
+Jeremie Frimpong,jeremie frimpong,frimpong,Liverpool,EPL,1032,0,5,0.5,1.55,1.0
+Milos Kerkez,milos kerkez,kerkez,Liverpool,EPL,2251,2,1,1.5,0.69,1.0
+Andrew Robertson,andrew robertson,robertson,Liverpool,EPL,1165,1,0,1.1,1.4,0.7
+Virgil van Dijk,virgil van dijk,virgil,Liverpool,EPL,3420,6,1,3.77,1.44,6.0
+Ibrahima Konaté,ibrahima konate,konate,Liverpool,EPL,3090,1,0,1.19,0.98,1.0
+Conor Bradley,conor bradley,bradley,Liverpool,EPL,928,0,2,0.18,0.84,0.0
+Joe Gomez,joe gomez,gomez,Liverpool,EPL,594,0,2,0.28,0.64,0.3
+Konstantinos Tsimikas,konstantinos tsimikas,tsimikas,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Amara Nallo,amara nallo,nallo,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Rhys Williams,rhys williams,r.williams,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Calvin Ramsay,calvin ramsay,ramsay,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Mohamed Salah,mohamed salah,m.salah,Liverpool,EPL,2144,7,7,8.23,5.44,2.3
+Florian Wirtz,florian wirtz,wirtz,Liverpool,EPL,2374,5,4,6.83,5.14,0.7
+Luis Díaz Marulanda,luis diaz marulanda,luis diaz,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Cody Gakpo,cody gakpo,gakpo,Liverpool,EPL,2736,7,5,8.35,4.67,2.0
+Federico Chiesa,federico chiesa,chiesa,Liverpool,EPL,317,2,1,1.45,0.61,0.7
+Alexis Mac Allister,alexis mac allister,mac allister,Liverpool,EPL,2654,2,5,3.89,1.69,2.0
+Dominik Szoboszlai,dominik szoboszlai,szoboszlai,Liverpool,EPL,3232,6,7,4.76,6.83,4.3
+Curtis Jones,curtis jones,c.jones,Liverpool,EPL,1923,1,3,2.21,2.77,4.7
+Ryan Gravenberch,ryan gravenberch,gravenberch,Liverpool,EPL,2991,5,5,1.89,2.26,4.7
+Endo Wataru,endo wataru,endo,Liverpool,EPL,170,0,1,0.04,0.05,0.0
+Stefan Bajčetić Maquieira,stefan bajcetic maquieira,bajcetic,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+James McConnell,james mcconnell,mcconnell,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Tyler Morton,tyler morton,morton,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Trey Nyoni,trey nyoni,nyoni,Liverpool,EPL,21,0,0,0.37,0.02,0.3
+Darwin Núñez Ribeiro,darwin nunez ribeiro,darwin,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Jayden Danns,jayden danns,danns,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Alexander Isak,alexander isak,isak,Liverpool,EPL,694,3,1,2.59,0.08,0.3
+Hugo Ekitiké,hugo ekitike,ekitike,Liverpool,EPL,1797,11,4,10.1,2.45,0.0
+Rio Ngumoha,rio ngumoha,ngumoha,Liverpool,EPL,547,2,1,1.34,2.01,3.3
+Giovanni Leoni,giovanni leoni,leoni,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Kieran Morrison,kieran morrison,morrison,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Wellity Lucky,wellity lucky,lucky,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Will Wright,will wright,wright,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Talla Ndiaye,talla ndiaye,ndiaye,Liverpool,EPL,0,0,0,0.0,0.0,0.0
+Antoine Semenyo,antoine semenyo,semenyo,Man City,EPL,3200,17,6,11.1,3.12,4.8
+James Trafford,james trafford,trafford,Man City,EPL,360,0,0,0.0,0.0,0.5
+Marc Guéhi,marc guehi,guehi,Man City,EPL,3150,3,5,4.05,2.37,4.2
+Ederson Santana de Moraes,ederson santana de moraes,ederson m.,Man City,EPL,0,0,0,0.0,0.0,0.0
+Marcus Bettinelli,marcus bettinelli,bettinelli,Man City,EPL,0,0,0,0.0,0.0,0.0
+Rayan Aït-Nouri,rayan ait-nouri,ait-nouri,Man City,EPL,971,0,2,0.53,2.01,1.8
+Joško Gvardiol,josko gvardiol,gvardiol,Man City,EPL,1370,2,2,2.25,0.7,0.5
+Manuel Akanji,manuel akanji,akanji,Man City,EPL,0,0,0,0.0,0.0,0.0
+Nathan Aké,nathan ake,ake,Man City,EPL,686,0,0,0.72,0.53,2.0
+Abdukodir Khusanov,abdukodir khusanov,khusanov,Man City,EPL,1427,0,0,0.65,1.21,2.0
+Matheus Nunes,matheus nunes,matheus n.,Man City,EPL,2861,1,8,0.34,2.23,2.0
+Rúben dos Santos Gato Alves Dias,ruben dos santos gato alves dias,ruben,Man City,EPL,2139,2,0,0.57,0.65,0.2
+John Stones,john stones,stones,Man City,EPL,436,0,0,0.0,0.09,1.0
+Rico Lewis,rico lewis,lewis,Man City,EPL,401,0,1,0.19,1.39,0.0
+Nico O'Reilly,nico o'reilly,o'reilly,Man City,EPL,2643,5,4,6.12,2.67,1.8
+Vitor de Oliveira Nunes dos Reis,vitor de oliveira nunes dos reis,vitor reis,Man City,EPL,0,0,0,0.0,0.0,0.0
+Omar Marmoush,omar marmoush,marmoush,Man City,EPL,691,3,3,2.78,0.77,3.8
+Phil Foden,phil foden,foden,Man City,EPL,2078,7,5,6.03,4.76,4.0
+Sávio Moreira de Oliveira,savio moreira de oliveira,savinho,Man City,EPL,817,1,2,2.5,1.59,3.2
+Bernardo Mota Veiga de Carvalho e Silva,bernardo mota veiga de carvalho e silva,bernardo,Man City,EPL,2869,2,4,2.71,4.11,2.2
+Rayan Cherki,rayan cherki,cherki,Man City,EPL,1772,4,13,4.28,8.87,1.8
+Jérémy Doku,jeremy doku,doku,Man City,EPL,1773,5,8,2.87,5.86,3.8
+İlkay Gündoğan,ilkay gundogan,gundogan,Man City,EPL,0,0,0,0.0,0.0,0.0
+Rodrigo 'Rodri' Hernandez Cascante,rodrigo 'rodri' hernandez cascante,rodrigo,Man City,EPL,1510,1,1,1.15,2.45,1.8
+Mateo Kovačić,mateo kovacic,kovacic,Man City,EPL,125,0,1,0.13,0.42,0.8
+Nico González Iglesias,nico gonzalez iglesias,n.gonzalez,Man City,EPL,1561,1,0,0.68,1.12,1.0
+Claudio Echeverri,claudio echeverri,echeverri,Man City,EPL,0,0,0,0.0,0.0,0.0
+Tijjani Reijnders,tijjani reijnders,reijnders,Man City,EPL,1623,5,3,4.61,2.35,1.5
+Sverre Nypan,sverre nypan,nypan,Man City,EPL,0,0,0,0.0,0.0,0.0
+Kalvin Phillips,kalvin phillips,phillips,Man City,EPL,0,0,0,0.0,0.0,0.0
+Erling Haaland,erling haaland,haaland,Man City,EPL,2953,27,8,25.5,2.67,5.0
+Gianluigi Donnarumma,gianluigi donnarumma,donnarumma,Man City,EPL,3060,0,0,0.0,0.13,3.8
+Divine Mukasa,divine mukasa,mukasa,Man City,EPL,25,0,0,0.0,0.21,0.0
+Stephen Mfuni,stephen mfuni,mfuni,Man City,EPL,0,0,0,0.0,0.0,0.0
+Ryan McAidoo,ryan mcaidoo,mcaidoo,Man City,EPL,0,0,0,0.0,0.0,0.0
+Charlie Gray,charlie gray,gray,Man City,EPL,0,0,0,0.0,0.0,0.0
+Reigan Heskey,reigan heskey,heskey,Man City,EPL,0,0,0,0.0,0.0,0.0
+Max Alleyne,max alleyne,alleyne,Man City,EPL,135,0,0,0.26,0.06,0.0
+Bryan Mbeumo,bryan mbeumo,mbeumo,Man Utd,EPL,2611,11,3,11.98,4.99,5.7
+Altay Bayındır,altay bayındır,bayindir,Man Utd,EPL,540,0,0,0.0,0.05,0.0
+André Onana,andre onana,onana,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Elyh Harrison,elyh harrison,harrison,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Tom Heaton,tom heaton,heaton,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Dermot Mee,dermot mee,mee,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Matthijs de Ligt,matthijs de ligt,de ligt,Man Utd,EPL,1170,1,0,1.38,0.83,0.0
+Lisandro Martínez,lisandro martinez,martinez,Man Utd,EPL,1229,0,0,0.15,0.6,5.0
+Noussair Mazraoui,noussair mazraoui,mazraoui,Man Utd,EPL,977,0,0,0.19,0.35,5.7
+Diego León Blanco,diego leon blanco,d.leon,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Diogo Dalot Teixeira,diogo dalot teixeira,dalot,Man Utd,EPL,2609,1,6,1.93,2.57,0.3
+Patrick Dorgu,patrick dorgu,dorgu,Man Utd,EPL,1440,4,4,2.39,1.84,6.7
+Harry Maguire,harry maguire,maguire,Man Utd,EPL,1649,1,2,1.12,0.5,6.3
+Luke Shaw,luke shaw,shaw,Man Utd,EPL,3220,1,1,0.72,1.98,6.0
+Leny Yoro,leny yoro,yoro,Man Utd,EPL,1730,0,1,1.34,0.59,0.3
+Harry Amass,harry amass,amass,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Tyler Fredricson,tyler fredricson,fredricson,Man Utd,EPL,2,0,0,0.0,0.0,0.0
+Ayden Heaven,ayden heaven,heaven,Man Utd,EPL,920,0,1,0.34,0.18,0.0
+Tyrell Malacia,tyrell malacia,malacia,Man Utd,EPL,15,0,0,0.0,0.0,0.3
+Bruno Borges Fernandes,bruno borges fernandes,b.fernandes,Man Utd,EPL,3065,9,24,10.79,12.28,8.7
+Matheus Santos Carneiro da Cunha,matheus santos carneiro da cunha,cunha,Man Utd,EPL,2493,10,4,6.9,3.36,3.7
+Marcus Rashford,marcus rashford,rashford,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Amad Diallo,amad diallo,amad,Man Utd,EPL,2339,2,5,5.46,4.74,4.0
+Antony dos Santos,antony dos santos,antony,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Mason Mount,mason mount,mount,Man Utd,EPL,1010,3,0,1.56,1.62,3.3
+Carlos Henrique Casimiro,carlos henrique casimiro,casemiro,Man Utd,EPL,2575,9,4,5.44,3.17,0.3
+Kobbie Mainoo,kobbie mainoo,mainoo,Man Utd,EPL,1653,1,2,0.48,1.27,3.7
+Manuel Ugarte Ribeiro,manuel ugarte ribeiro,ugarte,Man Utd,EPL,876,0,0,0.72,0.16,0.0
+Toby Collyer,toby collyer,collyer,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Jayce Fitzgerald,jayce fitzgerald,fitzgerald,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Jack Fletcher,jack fletcher,j.fletcher,Man Utd,EPL,107,0,0,0.03,0.02,0.0
+Sékou Koné,sekou kone,kone,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Jack Moorhouse,jack moorhouse,moorhouse,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Rasmus Højlund,rasmus højlund,højlund,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Joshua Zirkzee,joshua zirkzee,zirkzee,Man Utd,EPL,607,2,1,2.74,0.34,1.0
+Chido Obi,chido obi,obi,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Ethan Wheatley,ethan wheatley,wheatley,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Benjamin Sesko,benjamin sesko,sesko,Man Utd,EPL,1630,11,2,9.21,0.28,0.0
+Senne Lammens,senne lammens,lammens,Man Utd,EPL,2880,0,0,0.0,0.0,5.3
+Shea Lacey,shea lacey,lacey,Man Utd,EPL,40,0,0,0.1,0.01,0.3
+Bendito Mantato,bendito mantato,bendito mantato,Man Utd,EPL,15,0,0,0.0,0.01,0.0
+Tyler Fletcher,tyler fletcher,fletcher,Man Utd,EPL,17,0,0,0.0,0.01,0.3
+Godwill Kukonki,godwill kukonki,kukonki,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Jim Thwaites,jim thwaites,thwaites,Man Utd,EPL,0,0,0,0.0,0.0,0.0
+Jacob Ramsey,jacob ramsey,j.ramsey,Newcastle,EPL,1441,2,3,1.2,1.45,5.7
+Yoane Wissa,yoane wissa,wissa,Newcastle,EPL,517,1,1,3.13,0.54,0.7
+Nick Pope,nick pope,pope,Newcastle,EPL,2416,0,1,0.16,0.0,3.0
+Mark Gillespie,mark gillespie,gillespie,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Odysseas Vlachodimos,odysseas vlachodimos,odysseas,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Lewis Hall,lewis hall,hall,Newcastle,EPL,2176,1,2,1.01,2.78,1.3
+Fabian Schär,fabian schar,schar,Newcastle,EPL,1089,0,0,0.97,0.6,0.0
+Sven Botman,sven botman,botman,Newcastle,EPL,1834,1,1,1.73,0.86,3.7
+Dan Burn,dan burn,burn,Newcastle,EPL,2195,1,3,1.08,0.36,1.3
+Tino Livramento,tino livramento,livramento,Newcastle,EPL,1326,0,1,0.13,0.89,0.0
+Kieran Trippier,kieran trippier,trippier,Newcastle,EPL,1586,0,1,0.08,2.06,1.0
+Emil Krafth,emil krafth,krafth,Newcastle,EPL,45,0,0,0.0,0.0,0.0
+Jamaal Lascelles,jamaal lascelles,lascelles,Newcastle,EPL,19,0,0,0.04,0.0,0.0
+Alex Murphy,alex murphy,a.murphy,Newcastle,EPL,7,0,0,0.0,0.0,0.3
+Harrison Ashby,harrison ashby,ashby,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Miodrag Pivaš,miodrag pivas,pivas,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Matt Targett,matt targett,targett,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Anthony Gordon,anthony gordon,gordon,Newcastle,EPL,1798,6,4,8.77,3.38,0.0
+Anthony Elanga,anthony elanga,elanga,Newcastle,EPL,1302,0,1,1.65,1.74,0.7
+Harvey Barnes,harvey barnes,barnes,Newcastle,EPL,1951,7,1,6.84,2.72,4.3
+Bruno Guimarães Rodriguez Moura,bruno guimaraes rodriguez moura,bruno g.,Newcastle,EPL,2456,9,7,5.59,4.96,3.7
+Jacob Murphy,jacob murphy,j.murphy,Newcastle,EPL,1606,3,2,3.07,2.66,1.7
+Joelinton Cássio Apolinário de Lira,joelinton cassio apolinario de lira,joelinton,Newcastle,EPL,1950,2,1,2.36,1.35,0.7
+Sandro Tonali,sandro tonali,tonali,Newcastle,EPL,2534,0,2,1.75,2.87,1.0
+Antoñito Cordero Campillo,antonito cordero campillo,antonito c.,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Joe Willock,joe willock,willock,Newcastle,EPL,972,0,2,1.26,1.07,2.0
+Isaac Hayden,isaac hayden,hayden,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Garang Kuol,garang kuol,kuol,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Lewis Miley,lewis miley,l.miley,Newcastle,EPL,1493,1,4,1.36,2.1,0.0
+Joe White,joe white,white,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+William Osula,william osula,osula,Newcastle,EPL,805,7,1,4.28,0.62,5.7
+Sean Neave,sean neave,neave,Newcastle,EPL,13,0,0,0.03,0.0,0.3
+Aaron Ramsdale,aaron ramsdale,ramsdale,Newcastle,EPL,1003,0,0,0.0,0.0,0.0
+Malick Thiaw,malick thiaw,thiaw,Newcastle,EPL,2963,4,0,4.8,0.96,1.7
+Seung-Soo Park,seung-soo park,seung soo,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Nick Woltemade,nick woltemade,woltemade,Newcastle,EPL,1896,8,4,6.59,1.53,4.0
+John Ruddy,john ruddy,ruddy,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Leo Shahar,leo shahar,shahar,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Sam Alabi,sam alabi,alabi,Newcastle,EPL,0,0,0,0.0,0.0,0.0
+Oleksandr Zinchenko,oleksandr zinchenko,zinchenko,Nott'm Forest,EPL,352,0,0,0.07,0.36,0.0
+Stefan Ortega Moreno,stefan ortega moreno,ortega moreno,Nott'm Forest,EPL,270,0,0,0.0,0.01,0.0
+James McAtee,james mcatee,mcatee,Nott'm Forest,EPL,288,0,1,0.18,0.37,2.0
+Matz Sels,matz sels,sels,Nott'm Forest,EPL,2667,0,0,0.0,0.06,2.7
+Carlos Miguel dos Santos Pereira,carlos miguel dos santos pereira,c.miguel,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Matt Turner,matt turner,turner,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Nikola Milenković,nikola milenkovic,milenkovic,Nott'm Forest,EPL,3375,0,1,0.83,0.68,2.3
+Murillo Costa dos Santos,murillo costa dos santos,murillo,Nott'm Forest,EPL,2130,1,0,0.73,0.47,0.0
+Ola Aina,ola aina,aina,Nott'm Forest,EPL,1587,0,2,0.41,0.84,0.0
+Neco Williams,neco williams,n.williams,Nott'm Forest,EPL,3203,2,3,2.01,3.97,1.7
+David Mota Veiga Teixeira do Carmo,david mota veiga teixeira do carmo,david carmo,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Jair Paula da Cunha Filho,jair paula da cunha filho,jair cunha,Nott'm Forest,EPL,514,0,0,0.27,0.06,1.7
+Felipe Rodrigues da Silva,felipe rodrigues da silva,morato,Nott'm Forest,EPL,1340,1,0,1.32,0.15,5.0
+Omar Richards,omar richards,o.richards,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Zach Abbott,zach abbott,abbott,Nott'm Forest,EPL,165,0,0,0.0,0.01,0.0
+Willy Boly,willy boly,boly,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Morgan Gibbs-White,morgan gibbs-white,gibbs-white,Nott'm Forest,EPL,3101,15,4,10.81,2.91,5.3
+Callum Hudson-Odoi,callum hudson-odoi,hudson-odoi,Nott'm Forest,EPL,1838,3,4,2.77,3.02,0.0
+Elliot Anderson,elliot anderson,anderson,Nott'm Forest,EPL,3332,4,5,2.94,4.79,8.7
+João Pedro Ferreira da Silva,joao pedro ferreira da silva,jota,Nott'm Forest,EPL,11,0,0,0.0,0.0,0.0
+Nicolás Domínguez,nicolas dominguez,dominguez,Nott'm Forest,EPL,1168,1,1,1.47,0.77,1.3
+Lewis O'Brien,lewis o'brien,o'brien,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Ibrahim Sangaré,ibrahim sangare,sangare,Nott'm Forest,EPL,2073,2,2,1.16,1.8,1.7
+Ryan Yates,ryan yates,yates,Nott'm Forest,EPL,602,0,2,0.49,0.37,0.3
+Eric da Silva Moreira,eric da silva moreira,da silva moreira,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Marko Stamenić,marko stamenic,stamenic,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Chris Wood,chris wood,wood,Nott'm Forest,EPL,896,3,0,4.29,0.32,1.7
+Igor Jesus Maciel da Cruz,igor jesus maciel da cruz,igor jesus,Nott'm Forest,EPL,2293,6,6,6.48,1.26,1.7
+Taiwo Awoniyi,taiwo awoniyi,awoniyi,Nott'm Forest,EPL,480,4,2,3.68,0.77,1.0
+Dan Ndoye,dan ndoye,ndoye,Nott'm Forest,EPL,1167,1,2,1.05,1.51,0.0
+Angus Gunn,angus gunn,gunn,Nott'm Forest,EPL,45,0,0,0.0,0.0,0.0
+Omari Hutchinson,omari hutchinson,hutchinson,Nott'm Forest,EPL,1676,1,7,2.01,3.87,2.7
+Arnaud Kalimuendo,arnaud kalimuendo,kalimuendo,Nott'm Forest,EPL,89,0,0,0.44,0.02,0.0
+John Victor Maciel Furtado,john victor maciel furtado,john,Nott'm Forest,EPL,437,0,0,0.0,0.0,0.0
+Nicolò Savona,nicolo savona,savona,Nott'm Forest,EPL,1025,2,0,1.34,0.45,0.0
+Luis Eduardo Soares da Silva,luis eduardo soares da silva,cuiabano,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Dilane Bakwa,dilane bakwa,bakwa,Nott'm Forest,EPL,549,0,2,0.54,1.01,1.3
+Lorenzo Lucca,lorenzo lucca,lucca,Nott'm Forest,EPL,126,1,0,0.79,0.01,0.3
+Luca Netz,luca netz,netz,Nott'm Forest,EPL,353,0,0,0.0,0.41,1.3
+Archie Whitehall,archie whitehall,whitehall,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Jimmy Sinclair,jimmy sinclair,sinclair,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Lamin Sillah,lamin sillah,sillah,Nott'm Forest,EPL,0,0,0,0.0,0.0,0.0
+Anthony Patterson,anthony patterson,patterson,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Simon Moore,simon moore,moore,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Blondy Nna Noukeu,blondy nna noukeu,nna noukeu,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Daniel Ballard,daniel ballard,ballard,Sunderland,EPL,2144,2,2,2.46,0.63,0.0
+Trai Hume,trai hume,hume,Sunderland,EPL,3032,2,1,2.27,2.05,5.0
+Aji Alese,aji alese,alese,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Joe Anderson,joe anderson,anderson,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Dennis Cirkin,dennis cirkin,cirkin,Sunderland,EPL,319,0,0,0.08,0.02,0.0
+Leo Fuhr Hjelde,leo fuhr hjelde,hjelde,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Niall Huggins,niall huggins,huggins,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Zak Johnson,zak johnson,johnson,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Luke O'Nien,luke o'nien,o'nien,Sunderland,EPL,565,0,1,0.15,0.13,3.3
+Timothée Pembélé,timothee pembele,pembele,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Reinildo Mandava,reinildo mandava,reinildo,Sunderland,EPL,1966,0,2,0.13,0.62,4.0
+Jenson Seelt,jenson seelt,seelt,Sunderland,EPL,133,0,0,0.0,0.01,0.0
+Simon Adingra,simon adingra,adingra,Sunderland,EPL,649,1,1,0.35,0.62,0.0
+Habib Diarra,habib diarra,diarra,Sunderland,EPL,1403,2,6,3.27,0.85,1.3
+Patrick Roberts,patrick roberts,roberts,Sunderland,EPL,27,0,0,0.03,0.02,0.0
+Milan Aleksić,milan aleksic,aleksic,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Enzo Le Fée,enzo le fee,e.le fee,Sunderland,EPL,2930,5,6,5.22,5.95,7.0
+Romaine Mundle,romaine mundle,mundle,Sunderland,EPL,399,0,0,0.87,0.48,0.0
+Dan Neil,dan neil,neil,Sunderland,EPL,13,0,0,0.0,0.0,0.0
+Ian Poveda-Ocampo,ian poveda-ocampo,poveda,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Chris Rigg,chris rigg,rigg,Sunderland,EPL,758,1,1,0.86,0.93,1.7
+Noah Sadiki,noah sadiki,sadiki,Sunderland,EPL,2891,0,2,1.43,1.46,2.7
+Chemsdine Talbi,chemsdine talbi,talbi,Sunderland,EPL,1553,4,2,2.13,1.18,1.3
+Abdoullah Ba,abdoullah ba,ba,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Alan Browne,alan browne,browne,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Pierre Ekwah Elimby,pierre ekwah elimby,ekwah,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Harrison Jones,harrison jones,h.jones,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Jay Matete,jay matete,matete,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Nectarios Triantis,nectarios triantis,triantis,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Wilson Isidor,wilson isidor,isidor,Sunderland,EPL,1148,6,1,4.7,0.38,2.0
+Eliezer Mayenda Dossou,eliezer mayenda dossou,mayenda,Sunderland,EPL,751,2,0,2.13,0.22,0.3
+Ahmed Abdullahi,ahmed abdullahi,abdullahi,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Luís Hemir Silva Semedo,luis hemir silva semedo,luis hemir,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Nazarii Rusyn,nazarii rusyn,rusyn,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Granit Xhaka,granit xhaka,xhaka,Sunderland,EPL,2901,1,6,1.01,3.73,2.7
+Robin Roefs,robin roefs,roefs,Sunderland,EPL,3150,0,0,0.0,0.1,3.7
+Arthur Masuaku,arthur masuaku,masuaku,Sunderland,EPL,125,0,0,0.07,0.08,0.0
+Omar Alderete,omar alderete,alderete,Sunderland,EPL,2797,1,1,1.62,0.91,3.0
+Nordi Mukiele,nordi mukiele,mukiele,Sunderland,EPL,2784,3,5,1.62,2.65,4.0
+Lutsharel Geertruida,lutsharel geertruida,geertruida,Sunderland,EPL,1681,0,0,0.79,0.85,3.0
+Brian Brobbey,brian brobbey,brobbey,Sunderland,EPL,1920,7,2,6.02,0.67,4.7
+Bertrand Traoré,bertrand traore,traore,Sunderland,EPL,634,1,1,0.48,0.25,0.0
+Jenson Jones,jenson jones,jenson jones,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Tymur Tutierov,tymur tutierov,tutierov,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Djiamgone Jocelin Ta Bi,djiamgone jocelin ta bi,jocelin.t,Sunderland,EPL,38,0,0,0.0,0.04,0.0
+Melker Ellborg,melker ellborg,ellborg,Sunderland,EPL,270,0,0,0.0,0.02,0.0
+Nilson Angulo,nilson angulo,angulo,Sunderland,EPL,401,0,0,0.77,0.12,1.3
+Jack Whittaker,jack whittaker,whittaker,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Jaydon Jones,jaydon jones,jones,Sunderland,EPL,0,0,0,0.0,0.0,0.0
+Guglielmo Vicario,guglielmo vicario,vicario,Spurs,EPL,2790,0,0,0.0,0.04,0.0
+Brandon Austin,brandon austin,austin,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Antonín Kinský,antonin kinsky,kinsky,Spurs,EPL,630,0,0,0.0,0.0,3.0
+Pedro Porro Sauceda,pedro porro sauceda,pedro porro,Spurs,EPL,2793,1,3,1.05,4.37,3.7
+Cristian Romero,cristian romero,romero,Spurs,EPL,1869,4,1,1.39,1.25,0.0
+Kevin Danso,kevin danso,danso,Spurs,EPL,1489,0,0,0.62,0.28,4.7
+Ben Davies,ben davies,davies,Spurs,EPL,136,1,0,0.49,0.07,0.0
+Radu Drăgușin,radu dragusin,dragusin,Spurs,EPL,515,0,0,0.31,0.01,0.3
+Djed Spence,djed spence,spence,Spurs,EPL,2049,0,0,0.9,1.77,2.7
+Destiny Udogie,destiny udogie,udogie,Spurs,EPL,1335,0,1,0.18,0.72,3.0
+Micky van de Ven,micky van de ven,van de ven,Spurs,EPL,3041,4,1,2.82,0.38,2.7
+Ashley Phillips,ashley phillips,phillips,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Takai Kōta,takai kota,takai,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Luka Vušković,luka vuskovic,vuskovic,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Son Heung-min,son heung-min,son,Spurs,EPL,0,0,0,0.0,0.0,0.0
+James Maddison,james maddison,maddison,Spurs,EPL,34,0,0,0.21,0.06,1.0
+Mohammed Kudus,mohammed kudus,kudus,Spurs,EPL,1535,2,6,1.92,2.41,0.0
+Dejan Kulusevski,dejan kulusevski,kulusevski,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Mathys Tel,mathys tel,tel,Spurs,EPL,1334,4,2,2.47,2.43,4.7
+Rodrigo Bentancur,rodrigo bentancur,bentancur,Spurs,EPL,1880,1,1,0.72,0.84,4.0
+Lucas Bergvall,lucas bergvall,bergvall,Spurs,EPL,955,1,3,1.23,0.43,0.3
+Yves Bissouma,yves bissouma,bissouma,Spurs,EPL,600,0,0,0.36,0.1,0.0
+Wilson Odobert,wilson odobert,odobert,Spurs,EPL,972,0,2,1.92,1.21,0.0
+Manor Solomon,manor solomon,solomon,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Bryan Gil Salvatierra,bryan gil salvatierra,bryan,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Archie Gray,archie gray,gray,Spurs,EPL,1471,2,2,1.5,1.29,0.3
+Mikey Moore,mikey moore,moore,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Pape Matar Sarr,pape matar sarr,p.m.sarr,Spurs,EPL,1388,2,4,1.63,1.11,1.3
+Yang Min-hyeok,yang min-hyeok,min-hyeok,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Callum Olusesi,callum olusesi,olusesi,Spurs,EPL,14,0,0,0.0,0.01,0.0
+Dominic Solanke-Mitchell,dominic solanke-mitchell,solanke,Spurs,EPL,997,3,0,2.97,0.34,0.0
+Richarlison de Andrade,richarlison de andrade,richarlison,Spurs,EPL,1954,11,4,8.64,1.46,3.7
+Will Lankshear,will lankshear,lankshear,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Dane Scarlett,dane scarlett,scarlett,Spurs,EPL,7,0,0,0.0,0.01,0.0
+João Maria Lobo Alves Palhares Costa Palhinha Gonçalves,joao maria lobo alves palhares costa palhinha goncalves,j.palhinha,Spurs,EPL,2192,5,3,2.72,0.65,6.3
+Xavi Simons,xavi simons,xavi,Spurs,EPL,1747,2,5,3.06,3.85,0.0
+Randal Kolo Muani,randal kolo muani,kolo muani,Spurs,EPL,1655,1,1,2.07,1.63,1.7
+Jun'ai Byfield,jun'ai byfield,byfield,Spurs,EPL,1,0,0,0.0,0.0,0.0
+James Rowswell,james rowswell,rowswell,Spurs,EPL,1,0,0,0.0,0.0,0.0
+Yusuf Akhamrich,yusuf akhamrich,akhamrich,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Lucá Williams-Barnett,luca williams-barnett,williams-barnett,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Conor Gallagher,conor gallagher,gallagher,Spurs,EPL,1183,1,1,1.23,0.7,2.3
+João Victor de Souza Menezes,joao victor de souza menezes,souza,Spurs,EPL,142,0,0,0.02,0.03,0.0
+Rio Kyerematen,rio kyerematen,kyerematen,Spurs,EPL,0,0,0,0.0,0.0,0.0
+James Wilson,james wilson,wilson,Spurs,EPL,0,0,0,0.0,0.0,0.0
+Adama Traoré Diarra,adama traore diarra,adama,West Ham,EPL,376,0,0,0.69,0.57,0.0
+Alphonse Areola,alphonse areola,areola,West Ham,EPL,1800,0,1,0.0,0.0,0.0
+Wes Foderingham,wes foderingham,foderingham,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Krisztián Hegyi,krisztian hegyi,hegyi,West Ham,EPL,0,0,0,0.0,0.0,0.0
+El Hadji Malick Diouf,el hadji malick diouf,diouf,West Ham,EPL,2706,0,6,0.57,2.51,2.7
+Emerson Palmieri dos Santos,emerson palmieri dos santos,emerson,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Maximilian Kilman,maximilian kilman,kilman,West Ham,EPL,1559,0,0,0.56,0.25,0.0
+Konstantinos Mavropanos,konstantinos mavropanos,mavropanos,West Ham,EPL,2532,3,0,2.47,0.7,5.0
+Nayef Aguerd,nayef aguerd,n.aguerd,West Ham,EPL,180,0,0,0.1,0.03,0.0
+Ollie Scarles,ollie scarles,scarles,West Ham,EPL,656,0,1,0.18,0.32,0.0
+Jean-Clair Todibo,jean-clair todibo,todibo,West Ham,EPL,1817,0,1,0.25,0.32,0.3
+Aaron Wan-Bissaka,aaron wan-bissaka,wan-bissaka,West Ham,EPL,2080,0,3,0.0,1.0,1.0
+Kaelan Casey,kaelan casey,casey,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Lucas Tolentino Coelho de Lima,lucas tolentino coelho de lima,l.paqueta,West Ham,EPL,1513,4,2,2.85,2.0,0.0
+Tomáš Souček,tomas soucek,soucek,West Ham,EPL,2190,5,2,5.73,0.52,2.0
+Crysencio Summerville,crysencio summerville,summerville,West Ham,EPL,2470,5,4,5.43,3.35,3.0
+Edson Álvarez Velázquez,edson alvarez velazquez,alvarez,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Maxwel Cornet,maxwel cornet,cornet,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Guido Rodríguez,guido rodriguez,g.rodriguez,West Ham,EPL,175,0,0,0.03,0.04,0.0
+Luis Guilherme Lira dos Santos,luis guilherme lira dos santos,l.guilherme,West Ham,EPL,121,0,0,0.07,0.03,0.0
+George Earthy,george earthy,earthy,West Ham,EPL,8,0,0,0.0,0.01,0.0
+Andy Irving,andy irving,irving,West Ham,EPL,156,0,0,0.0,0.17,0.0
+Lewis Orford,lewis orford,orford,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Freddie Potts,freddie potts,potts,West Ham,EPL,1162,0,1,0.21,1.06,0.0
+Jarrod Bowen,jarrod bowen,bowen,West Ham,EPL,3406,9,13,7.22,5.21,5.3
+Niclas Füllkrug,niclas fullkrug,fullkrug,West Ham,EPL,407,0,0,0.93,0.21,0.0
+Callum Marshall,callum marshall,marshall,West Ham,EPL,58,0,0,0.13,0.0,0.0
+Kyle Walker-Peters,kyle walker-peters,walker-peters,West Ham,EPL,1378,1,0,1.13,0.37,2.0
+Callum Wilson,callum wilson,wilson,West Ham,EPL,1234,7,2,7.6,0.54,2.7
+Mads Hermansen,mads hermansen,hermansen,West Ham,EPL,1620,0,1,0.0,0.01,4.7
+Mateus Gonçalo Espanha Fernandes,mateus goncalo espanha fernandes,m.fernandes,West Ham,EPL,3017,3,4,1.99,2.96,5.0
+Soungoutou Magassa,soungoutou magassa,s.magassa,West Ham,EPL,971,1,0,0.44,0.32,0.0
+Lukasz Fabianski,lukasz fabianski,fabianski,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Ezra Mayers,ezra mayers,mayers,West Ham,EPL,113,0,0,0.12,0.49,0.0
+Airidas Golambeckis,airidas golambeckis,golambeckis,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Mohamadou Kanté,mohamadou kante,mohamadou kante,West Ham,EPL,67,0,0,0.07,0.04,0.3
+Pablo Felipe Pereira de Jesus,pablo felipe pereira de jesus,pablo,West Ham,EPL,819,0,1,1.05,1.11,1.0
+Valentín Castellanos,valentin castellanos,taty,West Ham,EPL,1384,6,1,5.75,0.81,5.0
+Keiber Lamadrid,keiber lamadrid,lamadrid,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Axel Disasi,axel disasi,disasi,West Ham,EPL,1254,0,0,1.1,0.03,3.0
+Finlay Herrick,finlay herrick,herrick,West Ham,EPL,0,0,0,0.0,0.0,0.0
+Sam Johnstone,sam johnstone,johnstone,Wolves,EPL,1080,0,0,0.0,0.02,0.0
+José Malheiro de Sá,jose malheiro de sa,jose sa,Wolves,EPL,2070,0,0,0.0,0.04,3.0
+Daniel Bentley,daniel bentley,bentley,Wolves,EPL,270,0,0,0.0,0.0,0.7
+Emmanuel Agbadou,emmanuel agbadou,agbadou,Wolves,EPL,1100,0,0,0.57,0.4,0.0
+Matt Doherty,matt doherty,doherty,Wolves,EPL,786,0,0,0.09,0.19,0.0
+Hugo Bueno López,hugo bueno lopez,h.bueno,Wolves,EPL,2359,1,3,0.86,3.49,0.7
+Yerson Mosquera Valdelamar,yerson mosquera valdelamar,mosquera,Wolves,EPL,2137,0,0,2.51,0.62,2.7
+Rodrigo Martins Gomes,rodrigo martins gomes,r.gomes,Wolves,EPL,954,3,0,2.13,0.39,1.7
+Santiago Ignacio Bueno,santiago ignacio bueno,s.bueno,Wolves,EPL,2552,3,2,2.28,1.45,1.7
+Toti Gomes,toti gomes,toti,Wolves,EPL,1423,0,0,0.53,0.29,1.3
+Ki-Jana Hoever,ki-jana hoever,hoever,Wolves,EPL,423,0,0,0.02,0.36,0.0
+Bastien Meupiyou Menadjou,bastien meupiyou menadjou,meupiyou,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Pedro Cardoso de Lima,pedro cardoso de lima,pedro lima,Wolves,EPL,257,0,0,0.35,0.37,1.0
+Alfie Pond,alfie pond,pond,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Hwang Hee-chan,hwang hee-chan,hee chan,Wolves,EPL,1439,2,2,2.37,1.57,2.3
+André Trindade da Costa Neto,andre trindade da costa neto,andre,Wolves,EPL,2760,1,0,0.52,0.99,2.7
+Jean-Ricner Bellegarde,jean-ricner bellegarde,bellegarde,Wolves,EPL,1239,1,1,1.04,1.06,0.7
+Fer López González,fer lopez gonzalez,fer lopez,Wolves,EPL,228,0,1,0.16,0.61,0.0
+João Victor Gomes da Silva,joao victor gomes da silva,j.gomes,Wolves,EPL,2829,1,2,1.29,2.09,2.0
+Gonçalo Manuel Ganchinho Guedes,goncalo manuel ganchinho guedes,guedes,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Marshall Munetsi,marshall munetsi,munetsi,Wolves,EPL,872,1,2,1.64,0.38,0.0
+Boubacar Traoré,boubacar traore,b.traore,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Tawanda Chirewa,tawanda chirewa,chirewa,Wolves,EPL,25,0,0,0.0,0.0,0.0
+Tom Edozie,tom edozie,edozie,Wolves,EPL,12,1,0,0.23,0.0,0.0
+Enso González Medina,enso gonzalez medina,gonzalez,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Joe Hodge,joe hodge,hodge,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Fábio Soares Silva,fabio soares silva,fabio silva,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Saša Kalajdžić,sasa kalajdzic,kalajdzic,Wolves,EPL,14,0,0,0.0,0.01,0.0
+Leon Chiwome,leon chiwome,chiwome,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Nathan Fraser,nathan fraser,fraser,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Jhon Arias,jhon arias,j.arias,Wolves,EPL,1117,1,0,3.38,0.62,0.0
+David Møller Wolfe,david møller wolfe,møller wolfe,Wolves,EPL,1042,0,2,0.13,1.09,1.7
+Jackson Tchatchoua,jackson tchatchoua,tchatchoua,Wolves,EPL,1834,0,1,0.33,1.6,0.0
+Ladislav Krejcí,ladislav krejci,krejci,Wolves,EPL,2356,2,2,2.23,1.49,2.7
+Tolu Arokodare,tolu arokodare,tolu,Wolves,EPL,1402,3,2,5.49,0.39,1.0
+Mateus Mané,mateus mane,mane,Wolves,EPL,1787,3,2,2.01,3.69,5.0
+Saheed Olagunju,saheed olagunju,olagunju,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Luke Rawlings,luke rawlings,rawlings,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Temple Ojinnaka,temple ojinnaka,ojinnaka,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Ethan Sutherland,ethan sutherland,sutherland,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Jerome Abbey,jerome abbey,abbey,Wolves,EPL,16,0,0,0.0,0.0,0.3
+Angel Gomes,angel gomes,angel,Wolves,EPL,457,0,0,0.25,0.28,1.0
+Adam Armstrong,adam armstrong,armstrong,Wolves,EPL,1141,2,2,2.77,0.85,3.7
+Alfie Brooks,alfie brooks,brooks,Wolves,EPL,0,0,0,0.0,0.0,0.0
+Josh Gracey,josh gracey,gracey,Wolves,EPL,0,0,0,0.0,0.0,0.0

@@ -38,13 +38,18 @@ export type Prediction = {
   score_matrix: number[][] | null;
   top_scores: { home: number; away: number; prob: number }[];
   markets: { btts: number | null; over_1_5: number | null; over_2_5: number | null; over_3_5: number | null };
+  h2h?: { played: number; home_wins: number; draws: number; away_wins: number; home_goals: number; away_goals: number; last5: { home_goals: number; away_goals: number }[] };
+  players?: { home: XiPlayer[]; away: XiPlayer[] };
 };
 export type SquadRow = {
   team: string; squad_overall: number; top11_overall: number; attack_rating: number;
   midfield_rating: number; defense_rating: number; gk_rating: number; avg_age: number | null;
   squad_value_m: number | null; n_players: number;
 };
-export type XiPlayer = { player: string; position: string; overall: number; club: string; age: number | null; intl_goals?: number; club_xg?: any };
+export type XiPlayer = {
+  player: string; position: string; overall: number; club: string; age: number | null;
+  intl_goals?: number; club_goals?: number | null; club_assists?: number | null; club_xg?: number | null;
+};
 export type SquadDetail = {
   strength: SquadRow & { excluded: string[] };
   xi: XiPlayer[];

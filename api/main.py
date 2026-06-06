@@ -108,6 +108,15 @@ def latest_form(team: str) -> dict | None:
 ALL_TEAMS = sorted(set(MATCHES.home_team).union(MATCHES.away_team) | set(DC.teams_) | set(ELO.keys()))
 FORM_CACHE = {t: latest_form(t) for t in ALL_TEAMS}
 
+# Pre-index head-to-head once (so the per-matchup model is cheap to compute many
+# thousands of times during the tournament simulation). key = frozenset({a,b}).
+print("indexing head-to-head ...")
+H2H_INDEX: dict[frozenset, list] = {}
+for _r in MATCHES.itertuples(index=False):
+    H2H_INDEX.setdefault(frozenset((_r.home_team, _r.away_team)), []).append(
+        (_r.home_team, int(_r.home_score), int(_r.away_score)))
+print(f"  {len(H2H_INDEX):,} unique team pairs indexed")
+
 # Real World Cup match cadence (teams play every ~4 days during the tournament).
 # Data check: the 25th percentile of rest-days across all international matches is
 # exactly 4 days, i.e. dense tournament scheduling. Applied EQUALLY to both teams,
@@ -120,17 +129,11 @@ def build_feature_row(home: str, away: str, neutral: bool) -> pd.DataFrame:
     fa = FORM_CACHE.get(away) or dict(f5=1, f5gf=1, f5ga=1, f10=1, f10gf=1, f10ga=1)
     h_elo = ELO.get(home, 1500.0)
     a_elo = ELO.get(away, 1500.0)
-    h2h = MATCHES[
-        ((MATCHES.home_team == home) & (MATCHES.away_team == away)) |
-        ((MATCHES.home_team == away) & (MATCHES.away_team == home))
-    ].tail(5)
+    h2h = H2H_INDEX.get(frozenset((home, away)), [])[-5:]
     hw = dr = aw = 0
     gf = ga = 0.0
-    for _, r in h2h.iterrows():
-        if r.home_team == home:
-            hg, ag = r.home_score, r.away_score
-        else:
-            hg, ag = r.away_score, r.home_score
+    for ht, hs, as_ in h2h:
+        hg, ag = (hs, as_) if ht == home else (as_, hs)
         if hg > ag: hw += 1
         elif hg < ag: aw += 1
         else: dr += 1
@@ -237,48 +240,200 @@ def _dc_metrics_from_lambdas(lh: float, la: float, rho: float, max_goals: int = 
             "top_scores": top, "score_matrix": m.tolist()}
 
 
+# ===========================================================================
+# UNIFIED MATCH MODEL — the single source of truth used by the predictor, the
+# group schedule, AND the tournament simulation, so all surfaces are consistent.
+# ===========================================================================
+def _dc_matrix(lh: float, la: float, rho: float, max_goals: int = 8) -> np.ndarray:
+    ph = _poisson.pmf(np.arange(max_goals + 1), max(lh, 0.05))
+    pa = _poisson.pmf(np.arange(max_goals + 1), max(la, 0.05))
+    m = np.outer(ph, pa)
+    for i in range(2):
+        for j in range(2):
+            m[i, j] *= _dc_tau(i, j, lh, la, rho)
+    return m / m.sum()
+
+
+def _markets_from_matrix(m: np.ndarray) -> dict:
+    n = m.shape[0] - 1
+    return {
+        "home_win": float(np.tril(m, -1).sum()),
+        "draw": float(np.trace(m)),
+        "away_win": float(np.triu(m, 1).sum()),
+        "expected_home_goals": float((m.sum(axis=1) * np.arange(n + 1)).sum()),
+        "expected_away_goals": float((m.sum(axis=0) * np.arange(n + 1)).sum()),
+        "btts": float(m[1:, 1:].sum()),
+        "over_1_5": float(sum(m[i, j] for i in range(n + 1) for j in range(n + 1) if i + j > 1)),
+        "over_2_5": float(sum(m[i, j] for i in range(n + 1) for j in range(n + 1) if i + j > 2)),
+        "over_3_5": float(sum(m[i, j] for i in range(n + 1) for j in range(n + 1) if i + j > 3)),
+        "top_scores": [{"home": i, "away": j, "prob": float(m[i, j])}
+                       for i, j in sorted(((i, j) for i in range(n + 1) for j in range(n + 1)),
+                                          key=lambda c: -m[c[0], c[1]])[:5]],
+        "score_matrix": m.tolist(),
+    }
+
+
+def _squad_tilt(home: str, away: str):
+    """Bounded adjustment from CURRENT 26-man squad quality (club-tier based).
+    Returns (wdl_logit, goal_factor_home, goal_factor_away). Stronger current
+    squad → higher win prob & expected goals. Bounded so it nudges, not dominates."""
+    if not SQUAD_OK:
+        return 0.0, 1.0, 1.0
+    sh, sa = SQUAD_FULL.get(home), SQUAD_FULL.get(away)
+    if not sh or not sa:
+        return 0.0, 1.0, 1.0
+    # squad_overall ~ 70-86; difference ~ ±12
+    d = (sh["squad_overall"] - sa["squad_overall"]) / 100.0   # ~ ±0.12
+    d = max(-0.12, min(0.12, d))
+    logit = 1.6 * d                       # ±~0.19 logit on the W/D/L
+    gf_h = 1.0 + 0.6 * d                  # ±~7% on expected goals
+    gf_a = 1.0 - 0.6 * d
+    return logit, gf_h, gf_a
+
+
+_CORE_CACHE: dict[tuple, dict] = {}
+
+
+def _match_core(home: str, away: str, neutral: bool) -> dict:
+    """Unified match distribution = calibrated CatBoost ⊕ Dixon-Coles, then nudged
+    by current 26-man squad strength. Cached. Used by the predictor, the group
+    schedule, AND the tournament simulation, so every surface is consistent."""
+    key = (home, away, bool(neutral))
+    c = _CORE_CACHE.get(key)
+    if c is not None:
+        return c
+    X = build_feature_row(home, away, neutral)
+    proba = _ml_proba(X)[0]
+    ml = (float(proba[0]), float(proba[1]), float(proba[2]))
+    eg_h, eg_a = float(REG_H.predict(X)[0]), float(REG_A.predict(X)[0])
+    logit, gf_h, gf_a = _squad_tilt(home, away)
+    try:
+        lh, la = DC.lambdas(home, away, neutral=neutral)
+        dcm = _markets_from_matrix(_dc_matrix(lh, la, DC.rho_))
+        dc = (dcm["home_win"], dcm["draw"], dcm["away_win"])
+        ph = (0.5 * ml[0] + 0.5 * dc[0]) * np.exp(logit / 2)
+        pa = (0.5 * ml[2] + 0.5 * dc[2]) * np.exp(-logit / 2)
+        pdraw = 0.5 * ml[1] + 0.5 * dc[1]
+        s = ph + pdraw + pa
+        probs = (float(ph / s), float(pdraw / s), float(pa / s))
+        eh = (0.5 * eg_h + 0.5 * dcm["expected_home_goals"]) * gf_h
+        ea = (0.5 * eg_a + 0.5 * dcm["expected_away_goals"]) * gf_a
+        M = _dc_matrix(eh, ea, DC.rho_)
+    except KeyError:
+        ph = ml[0] * np.exp(logit / 2); pa = ml[2] * np.exp(-logit / 2); pdraw = ml[1]
+        s = ph + pdraw + pa
+        probs = (float(ph / s), float(pdraw / s), float(pa / s))
+        eh, ea, dc = eg_h * gf_h, eg_a * gf_a, None
+        M = _dc_matrix(eh, ea, 0.0)
+    core = {"probs": probs, "eh": eh, "ea": ea, "M": M, "ml": ml, "dc": dc}
+    _CORE_CACHE[key] = core
+    return core
+
+
+_SAMPLER_CACHE: dict[tuple, tuple] = {}
+
+
+def _match_sampler(home: str, away: str, neutral: bool = True):
+    """Cached (probs, region_samplers) for the simulation — same model as the predictor."""
+    key = (home, away, bool(neutral))
+    s = _SAMPLER_CACHE.get(key)
+    if s is not None:
+        return s
+    M = np.asarray(_match_core(home, away, neutral)["M"])
+    n = M.shape[0]
+    regions = {"H": [], "D": [], "A": []}
+    for i in range(n):
+        for j in range(n):
+            r = "H" if i > j else ("D" if i == j else "A")
+            regions[r].append((i, j, M[i, j]))
+
+    def pack(reg):
+        if not reg:
+            return np.array([[0, 0]]), np.array([1.0])
+        cells = np.array([[c[0], c[1]] for c in reg])
+        pr = np.array([c[2] for c in reg], dtype=float)
+        pr = pr / pr.sum() if pr.sum() > 0 else np.ones(len(pr)) / len(pr)
+        return cells, np.cumsum(pr)
+
+    out = (_match_core(home, away, neutral)["probs"], {k: pack(v) for k, v in regions.items()})
+    _SAMPLER_CACHE[key] = out
+    return out
+
+
+def _sample_match(home: str, away: str, rng, neutral: bool = True):
+    """Sample (home_goals, away_goals, outcome) consistently with the predictor."""
+    (ph, pdraw, pa), regions = _match_sampler(home, away, neutral)
+    u = rng.random()
+    outcome = "H" if u < ph else ("D" if u < ph + pdraw else "A")
+    cells, cum = regions[outcome]
+    idx = min(int(np.searchsorted(cum, rng.random())), len(cells) - 1)
+    return int(cells[idx][0]), int(cells[idx][1]), outcome
+
+
+def _h2h_summary(home: str, away: str) -> dict:
+    """Real head-to-head record (oriented to `home`)."""
+    recs = H2H_INDEX.get(frozenset((home, away)), [])
+    hw = dr = aw = 0
+    gf = ga = 0
+    for ht, hs, as_ in recs:
+        hg, ag = (hs, as_) if ht == home else (as_, hs)
+        if hg > ag: hw += 1
+        elif hg < ag: aw += 1
+        else: dr += 1
+        gf += hg; ga += ag
+    last5 = []
+    for ht, hs, as_ in recs[-5:][::-1]:
+        hg, ag = (hs, as_) if ht == home else (as_, hs)
+        last5.append({"home_goals": hg, "away_goals": ag})
+    return {"played": len(recs), "home_wins": hw, "draws": dr, "away_wins": aw,
+            "home_goals": gf, "away_goals": ga, "last5": last5}
+
+
+def _squad_players(team: str, exclude: list[str] | None = None) -> list[dict]:
+    """All 26 squad members with ability + REAL international goal form."""
+    if not SQUAD_OK:
+        return []
+    players = _top_players(team, n=26, exclude=exclude)
+    if PERF_OK:
+        for p in players:
+            p["intl_goals"] = _player_intl_goals(team, p["player"])
+    return players
+
+
 def predict_match(home: str, away: str, neutral: bool = True,
                   home_out: list[str] | None = None, away_out: list[str] | None = None) -> dict:
-    X = build_feature_row(home, away, neutral)
-
-    # ML probabilities + expected goals (squad-agnostic by design)
-    proba = _ml_proba(X)[0]
-    ml = {"home_win": float(proba[0]), "draw": float(proba[1]), "away_win": float(proba[2])}
-    eg_h = float(REG_H.predict(X)[0])
-    eg_a = float(REG_A.predict(X)[0])
-
-    # Squad-availability multipliers (1.0 if nobody excluded / no squad data)
     mult_h = squad_attack_mult(home, home_out)
     mult_a = squad_attack_mult(away, away_out)
 
-    # Dixon-Coles — adjusted by squad availability when players are missing
-    try:
-        lh, la = DC.lambdas(home, away, neutral=neutral)
-        lh *= mult_h
-        la *= mult_a
-        dc = _dc_metrics_from_lambdas(lh, la, DC.rho_, max_goals=8)
-    except KeyError:
-        dc = None
-
-    if dc is not None:
-        final = {
-            "home_win": 0.5 * ml["home_win"] + 0.5 * dc["home_win"],
-            "draw":     0.5 * ml["draw"]     + 0.5 * dc["draw"],
-            "away_win": 0.5 * ml["away_win"] + 0.5 * dc["away_win"],
-        }
-        s = sum(final.values())
-        final = {k: v / s for k, v in final.items()}
-        exp_h = 0.5 * (eg_h * mult_h) + 0.5 * dc["expected_home_goals"]
-        exp_a = 0.5 * (eg_a * mult_a) + 0.5 * dc["expected_away_goals"]
-        score_matrix = dc["score_matrix"]
-        top_scores = dc["top_scores"]
-        btts, over_15, over_25, over_35 = dc["btts"], dc["over_1_5"], dc["over_2_5"], dc["over_3_5"]
+    if mult_h == 1.0 and mult_a == 1.0:
+        # Fast path: identical to the simulation (cached unified core).
+        core = _match_core(home, away, neutral)
+        ml = {"home_win": core["ml"][0], "draw": core["ml"][1], "away_win": core["ml"][2]}
+        final = {"home_win": core["probs"][0], "draw": core["probs"][1], "away_win": core["probs"][2]}
+        exp_h, exp_a = core["eh"], core["ea"]
+        mk = _markets_from_matrix(np.asarray(core["M"]))
+        dc = {"home_win": core["dc"][0], "draw": core["dc"][1], "away_win": core["dc"][2]} if core["dc"] else None
     else:
-        final = ml
-        exp_h, exp_a = eg_h * mult_h, eg_a * mult_a
-        score_matrix, top_scores = None, []
-        btts = over_15 = over_25 = over_35 = None
+        # Who's-missing what-if: scale the DC half by squad availability, re-blend.
+        X = build_feature_row(home, away, neutral)
+        proba = _ml_proba(X)[0]
+        ml = {"home_win": float(proba[0]), "draw": float(proba[1]), "away_win": float(proba[2])}
+        eg_h, eg_a = float(REG_H.predict(X)[0]) * mult_h, float(REG_A.predict(X)[0]) * mult_a
+        try:
+            lh, la = DC.lambdas(home, away, neutral=neutral)
+            dcm = _markets_from_matrix(_dc_matrix(lh * mult_h, la * mult_a, DC.rho_))
+            final = {k: 0.5 * ml[k] + 0.5 * dcm[k] for k in ("home_win", "draw", "away_win")}
+            s = sum(final.values()); final = {k: v / s for k, v in final.items()}
+            exp_h = 0.5 * eg_h + 0.5 * dcm["expected_home_goals"]
+            exp_a = 0.5 * eg_a + 0.5 * dcm["expected_away_goals"]
+            mk = _markets_from_matrix(_dc_matrix(exp_h, exp_a, DC.rho_))
+            dc = {k: dcm[k] for k in ("home_win", "draw", "away_win")}
+        except KeyError:
+            final, exp_h, exp_a, dc = ml, eg_h, eg_a, None
+            mk = _markets_from_matrix(_dc_matrix(exp_h, exp_a, 0.0))
 
+    score_matrix, top_scores = mk["score_matrix"], mk["top_scores"]
+    btts, over_15, over_25, over_35 = mk["btts"], mk["over_1_5"], mk["over_2_5"], mk["over_3_5"]
     sq_h = SQUAD_FULL.get(home) if SQUAD_OK else None
     sq_a = SQUAD_FULL.get(away) if SQUAD_OK else None
 
@@ -299,6 +454,11 @@ def predict_match(home: str, away: str, neutral: bool = True,
         "top_scores": top_scores,
         "markets": {
             "btts": btts, "over_1_5": over_15, "over_2_5": over_25, "over_3_5": over_35,
+        },
+        "h2h": _h2h_summary(home, away),
+        "players": {
+            "home": _squad_players(home, home_out),
+            "away": _squad_players(away, away_out),
         },
     }
 
@@ -514,7 +674,7 @@ def api_simulation(n: int = 10000):
     n = max(1000, min(n, 50000))
     rng = np.random.default_rng(42)
 
-    # ----- pre-compute group-stage λ's (these never change across sims) -----
+    # ----- group fixtures (home/away orientation fixed by host advantage) -----
     group_edges = []
     for g, teams in GROUPS.items():
         for a, b in combinations(teams, 2):
@@ -522,42 +682,16 @@ def api_simulation(n: int = 10000):
             hb = b in HOST_COUNTRIES
             neutral = not (ha or hb)
             home, away = (a, b) if ha or not hb else (b, a)
-            try:
-                lh, la = DC.lambdas(home, away, neutral=neutral)
-            except KeyError:
-                X = build_feature_row(home, away, neutral)
-                lh = float(REG_H.predict(X)[0])
-                la = float(REG_A.predict(X)[0])
-            group_edges.append((g, home, away, lh, la))
-
-    # ----- knockout λ cache (all matches are neutral) -----
-    k_cache: dict[tuple, tuple] = {}
-
-    def k_lambdas(a: str, b: str) -> tuple[float, float]:
-        key = (a, b)
-        cached = k_cache.get(key)
-        if cached is not None:
-            return cached
-        try:
-            lh, la = DC.lambdas(a, b, neutral=True)
-        except KeyError:
-            X = build_feature_row(a, b, True)
-            lh = float(REG_H.predict(X)[0])
-            la = float(REG_A.predict(X)[0])
-        k_cache[(a, b)] = (lh, la)
-        k_cache[(b, a)] = (la, lh)
-        return (lh, la)
+            group_edges.append((g, home, away, neutral))
 
     def play_knockout(a: str, b: str):
-        """Returns (winner, loser)."""
-        lh, la = k_lambdas(a, b)
-        hg = rng.poisson(max(lh, 0.05))
-        ag = rng.poisson(max(la, 0.05))
-        if hg > ag:
+        """Neutral knockout via the SAME unified model as the predictor; a level
+        result is decided by an Elo-weighted penalty shootout. Returns (winner, loser)."""
+        _hg, _ag, outcome = _sample_match(a, b, rng, neutral=True)
+        if outcome == "H":
             return a, b
-        if ag > hg:
+        if outcome == "A":
             return b, a
-        # Penalty shootout — soft Elo bias (smaller than open-play Elo gap)
         ea = ELO.get(a, 1500.0); eb = ELO.get(b, 1500.0)
         p_a = 1.0 / (1.0 + 10 ** ((eb - ea) / 800.0))
         return (a, b) if rng.random() < p_a else (b, a)
@@ -575,8 +709,8 @@ def api_simulation(n: int = 10000):
 
     # Group-stage edges indexed by group (for inner loop)
     per_group_edges: dict[str, list] = defaultdict(list)
-    for g, home, away, lh, la in group_edges:
-        per_group_edges[g].append((home, away, lh, la))
+    for g, home, away, neutral in group_edges:
+        per_group_edges[g].append((home, away, neutral))
 
     # ============= main simulation loop =============
     for _ in range(n):
@@ -589,9 +723,8 @@ def api_simulation(n: int = 10000):
             pts = {t: 0 for t in teams}
             gf = {t: 0 for t in teams}
             ga = {t: 0 for t in teams}
-            for home, away, lh, la in per_group_edges[g]:
-                hg = rng.poisson(max(lh, 0.05))
-                ag = rng.poisson(max(la, 0.05))
+            for home, away, neutral in per_group_edges[g]:
+                hg, ag, _o = _sample_match(home, away, rng, neutral=neutral)
                 gf[home] += hg; ga[home] += ag
                 gf[away] += ag; ga[away] += hg
                 if hg > ag: pts[home] += 3
