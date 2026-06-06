@@ -19,9 +19,10 @@ modern Next.js 16 frontend.
 - **World Cup 2026** — the official **104‑match schedule** (72 group + 32 knockout),
   the real FIFA **bracket with connector arrows** (R32 → Final + 3rd‑place), and a
   **Monte‑Carlo simulation** (up to 25k runs) to champion probability.
-- **Squad & XI intelligence** — squad strength for **135 nations** from FIFA‑24
-  ratings, a **projected starting XI**, and each player's **real international
-  goal form** (plus optional live club xG).
+- **Squad & XI intelligence** — the **real 26‑man squads** for all **48 World Cup
+  teams** (scraped from Wikipedia, announced 2 Jun 2026), a **projected 4‑3‑3
+  starting XI**, each player's **real international goal form**, and a
+  **"who's‑missing" what‑if**. Player ability is overlaid from FIFA‑24 ratings.
 - **Honest metrics** — accuracy, **Ranked Probability Score (RPS)**, Brier, a
   **calibration reliability diagram**, and a **binary‑market backtest** showing
   where 85–97% accuracy genuinely lives.
@@ -92,8 +93,9 @@ football/
 ```bash
 pip install -r requirements.txt
 
-python scripts/download_data.py     # download datasets (~3 min, no key needed)
-python scripts/train_pro.py          # train the pro ensemble (CPU; --gpu for CUDA)
+python scripts/download_data.py        # datasets + FIFA-24 ratings (~3 min, no key)
+python scripts/fetch_wc2026_squads.py  # real 26-man WC2026 squads (48 teams) from Wikipedia
+python scripts/train_pro.py            # train the pro ensemble (CPU; --gpu for CUDA)
 
 python -m uvicorn api.main:app --port 8000     # ML API → http://127.0.0.1:8000
 ```

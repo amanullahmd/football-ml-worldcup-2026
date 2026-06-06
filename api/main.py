@@ -369,9 +369,14 @@ def api_squads():
     """Squad-strength ranking for all national teams with FIFA-24 player data."""
     if not SQUAD_OK:
         return {"available": False, "teams": []}
+    import math
     cols = ["team", "squad_overall", "top11_overall", "attack_rating", "midfield_rating",
             "defense_rating", "gk_rating", "avg_age", "squad_value_m", "n_players"]
-    teams = [{k: r.get(k) for k in cols} for r in SQUADS_DF.to_dict("records")]
+
+    def clean(v):
+        return None if isinstance(v, float) and math.isnan(v) else v
+
+    teams = [{k: clean(r.get(k)) for k in cols} for r in SQUADS_DF.to_dict("records")]
     return {"available": True, "teams": teams}
 
 

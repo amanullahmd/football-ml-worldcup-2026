@@ -105,11 +105,23 @@ def download_statsbomb_index():
     fetch(url, RAW / "statsbomb_competitions.json")
 
 
+def download_player_ratings():
+    """FIFA-24 player attribute ratings (used as the squad-ability overlay)."""
+    print("[4] FIFA-24 player ratings")
+    url = "https://raw.githubusercontent.com/reh1548/FIFA-24-Player-Dataset/main/player_stats.csv"
+    dest = RAW / "players" / "fifa24_players.csv"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    fetched = fetch(url, dest)
+    print(f"    fifa24_players.csv: {'fetched' if fetched else 'cached'}")
+
+
 def main():
     download_international()
     download_club_leagues(n_seasons=10)
     download_statsbomb_index()
+    download_player_ratings()
     print("\nDone. Datasets are in data/raw/.")
+    print("Next: python scripts/fetch_wc2026_squads.py   (real 26-man WC2026 squads)")
 
 
 if __name__ == "__main__":
